@@ -1,0 +1,24 @@
+﻿PC Optimization Suite v2.0.1 - Portable Edition
+===============================================
+
+Quick Start:
+1. Double-click "Launch_PC_Optimizer.bat"
+2. Follow the first-run setup
+3. Enjoy automatic system optimization!
+
+Features:
+- Advanced driver updates
+- System optimization (8 categories)
+- Gaming mode optimization
+- Automatic updates
+- Comprehensive logging
+- Recovery system
+
+Requirements:
+- Windows 10/11
+- PowerShell 5.1+
+- Administrator rights recommended
+
+For detailed documentation, see README.md and SETUP_GUIDE.md
+
+Generated: $((Get-Date).ToString("yyyy-MM-dd HH:mm:ss"))

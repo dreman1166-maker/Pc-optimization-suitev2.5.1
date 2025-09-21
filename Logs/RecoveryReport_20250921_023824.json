@@ -1,0 +1,21 @@
+﻿{
+    "TotalRecommendations":  1,
+    "Recommendations":  [
+                            {
+                                "Actions":  [
+                                                "Review detailed error logs",
+                                                "Check system event logs",
+                                                "Update relevant software",
+                                                "Contact technical support"
+                                            ],
+                                "Frequency":  4,
+                                "Type":  "Error Pattern",
+                                "Priority":  "Low",
+                                "Issue":  "Recurring error: General Error",
+                                "Recommendation":  "Review error details and check system logs for more information"
+                            }
+                        ],
+    "Timestamp":  "2025-09-21 02:38:23",
+    "SystemHealth":  38,
+    "AnalysisPeriod":  "1 days"
+}

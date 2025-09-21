@@ -1,0 +1,17 @@
+﻿{
+    "Timestamp":  {
+                      "value":  "\/Date(1758447512704)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Sunday, September 21, 2025 5:38:32 AM"
+                  },
+    "CPU":  {
+                "Cores":  8,
+                "Name":  "AMD Ryzen 7 5800X 8-Core Processor             "
+            },
+    "UniqueID":  "78C6BD41CB2EED91C53509105D88AA9C8E601B52A6AACD0AB05734A2CE4E7F35",
+    "System":  {
+                   "OSName":  "Microsoft Windows 11 Pro",
+                   "Manufacturer":  "System manufacturer",
+                   "Model":  "System Product Name"
+               }
+}

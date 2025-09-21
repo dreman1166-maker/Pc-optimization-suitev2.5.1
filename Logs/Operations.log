@@ -1,0 +1,3684 @@
+﻿========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:18:19
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:18:19.579] [Info] [System] [Unknown] [PID:11736] [TID:17] Logging system initialized successfully
+[2025-09-21 02:18:19.653] [Info] [System] [Validation] [PID:11736] [TID:17] Test log entry
+[2025-09-21 02:18:19.657] [Warning] [System] [Validation] [PID:11736] [TID:17] Test warning entry
+[2025-09-21 02:18:19.659] [Success] [System] [Validation] [PID:11736] [TID:17] Test success entry
+[2025-09-21 02:18:22.057] [Info] [Recovery] [Unknown] [PID:11736] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 02:18:24.258] [Success] [Recovery] [Unknown] [PID:11736] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_021824.json | Additional: RecommendationCount=0
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:25:12
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:25:12.878] [Info] [System] [Unknown] [PID:11736] [TID:17] Logging system initialized successfully
+[2025-09-21 02:25:12.939] [Info] [System] [Validation] [PID:11736] [TID:17] Test log entry
+[2025-09-21 02:25:12.942] [Warning] [System] [Validation] [PID:11736] [TID:17] Test warning entry
+[2025-09-21 02:25:12.947] [Success] [System] [Validation] [PID:11736] [TID:17] Test success entry
+[2025-09-21 02:25:15.029] [Info] [Recovery] [Unknown] [PID:11736] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 02:25:16.894] [Success] [Recovery] [Unknown] [PID:11736] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_022516.json | Additional: RecommendationCount=0
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:28:08
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:28:09.221] [Info] [System] [Unknown] [PID:11736] [TID:17] Logging system initialized successfully
+[2025-09-21 02:28:09.256] [Info] [System] [Validation] [PID:11736] [TID:17] Test log entry
+[2025-09-21 02:28:09.260] [Warning] [System] [Validation] [PID:11736] [TID:17] Test warning entry
+[2025-09-21 02:28:09.263] [Success] [System] [Validation] [PID:11736] [TID:17] Test success entry
+[2025-09-21 02:28:11.275] [Info] [Recovery] [Unknown] [PID:11736] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 02:28:13.064] [Success] [Recovery] [Unknown] [PID:11736] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_022813.json | Additional: RecommendationCount=0
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:30:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:30:30.391] [Info] [System] [Unknown] [PID:20588] [TID:16] Logging system initialized successfully
+[2025-09-21 02:30:30.436] [Info] [Driver] [DriverUpdater] [PID:20588] [TID:16] AdvancedDriverUpdater started
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:38:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:38:20.500] [Info] [System] [Unknown] [PID:7700] [TID:17] Logging system initialized successfully
+[2025-09-21 02:38:20.578] [Info] [System] [Validation] [PID:7700] [TID:17] Test log entry
+[2025-09-21 02:38:20.582] [Warning] [System] [Validation] [PID:7700] [TID:17] Test warning entry
+[2025-09-21 02:38:20.585] [Success] [System] [Validation] [PID:7700] [TID:17] Test success entry
+[2025-09-21 02:38:22.882] [Info] [Recovery] [Unknown] [PID:7700] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 02:38:24.816] [Success] [Recovery] [Unknown] [PID:7700] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_023824.json | Additional: RecommendationCount=1
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:48:27
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:48:27.440] [Info] [System] [Unknown] [PID:7700] [TID:17] Logging system initialized successfully
+[2025-09-21 02:48:27.490] [Info] [System] [Validation] [PID:7700] [TID:17] Test log entry
+[2025-09-21 02:48:27.493] [Warning] [System] [Validation] [PID:7700] [TID:17] Test warning entry
+[2025-09-21 02:48:27.496] [Success] [System] [Validation] [PID:7700] [TID:17] Test success entry
+[2025-09-21 02:48:29.106] [Warning] [Recovery] [Unknown] [PID:7700] [TID:17] Error calculating system health: Exception calling "ToDateTime" with "1" argument(s): "Specified argument was out of the range of valid values.
+Parameter name: dmtfDate"
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:51:14
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:51:14.890] [Info] [System] [Unknown] [PID:31272] [TID:20] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 02:55:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 02:55:11.629] [Info] [System] [Unknown] [PID:7700] [TID:17] Logging system initialized successfully
+[2025-09-21 02:55:11.666] [Info] [System] [Validation] [PID:7700] [TID:17] Test log entry
+[2025-09-21 02:55:11.669] [Warning] [System] [Validation] [PID:7700] [TID:17] Test warning entry
+[2025-09-21 02:55:11.672] [Success] [System] [Validation] [PID:7700] [TID:17] Test success entry
+[2025-09-21 02:55:13.207] [Warning] [Recovery] [Unknown] [PID:7700] [TID:17] Error calculating system health: Exception calling "ToDateTime" with "1" argument(s): "Specified argument was out of the range of valid values.
+Parameter name: dmtfDate"
+[2025-09-21 02:55:13.614] [Info] [Recovery] [Unknown] [PID:7700] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 02:55:15.344] [Warning] [Recovery] [Unknown] [PID:7700] [TID:17] Error calculating system health: Exception calling "ToDateTime" with "1" argument(s): "Specified argument was out of the range of valid values.
+Parameter name: dmtfDate"
+[2025-09-21 02:55:15.349] [Success] [Recovery] [Unknown] [PID:7700] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_025515.json | Additional: RecommendationCount=1
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 03:09:28
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 03:09:28.838] [Info] [System] [Unknown] [PID:7700] [TID:17] Logging system initialized successfully
+[2025-09-21 03:09:28.877] [Info] [System] [Validation] [PID:7700] [TID:17] Test log entry
+[2025-09-21 03:09:28.880] [Warning] [System] [Validation] [PID:7700] [TID:17] Test warning entry
+[2025-09-21 03:09:28.883] [Success] [System] [Validation] [PID:7700] [TID:17] Test success entry
+[2025-09-21 03:09:30.419] [Warning] [Recovery] [Unknown] [PID:7700] [TID:17] Error calculating system health: Exception calling "ToDateTime" with "1" argument(s): "Specified argument was out of the range of valid values.
+Parameter name: dmtfDate"
+[2025-09-21 03:09:30.863] [Info] [Recovery] [Unknown] [PID:7700] [TID:17] Starting intelligent log analysis for recovery recommendations
+[2025-09-21 03:09:32.647] [Warning] [Recovery] [Unknown] [PID:7700] [TID:17] Error calculating system health: Exception calling "ToDateTime" with "1" argument(s): "Specified argument was out of the range of valid values.
+Parameter name: dmtfDate"
+[2025-09-21 03:09:32.652] [Success] [Recovery] [Unknown] [PID:7700] [TID:17] Recovery analysis completed. Report saved to: C:\Users\drema\AutoKey\Logs\RecoveryReport_20250921_030932.json | Additional: RecommendationCount=1
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:11.843] [Info] [System] [Unknown] [PID:30816] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:26.845] [Info] [System] [Unknown] [PID:20284] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:36.056] [Info] [System] [Unknown] [PID:39228] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:41.844] [Info] [System] [Unknown] [PID:14772] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:51.005] [Info] [System] [Unknown] [PID:26352] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:34:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:34:56.865] [Info] [System] [Unknown] [PID:39296] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:06.044] [Info] [System] [Unknown] [PID:30992] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:11.820] [Info] [System] [Unknown] [PID:31700] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:20.880] [Info] [System] [Unknown] [PID:38256] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:26.956] [Info] [System] [Unknown] [PID:17416] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:36.100] [Info] [System] [Unknown] [PID:30472] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:41.835] [Info] [System] [Unknown] [PID:25400] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:50.889] [Info] [System] [Unknown] [PID:31076] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:35:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:35:56.825] [Info] [System] [Unknown] [PID:29852] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:05.967] [Info] [System] [Unknown] [PID:36440] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:11.812] [Info] [System] [Unknown] [PID:30344] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:20.899] [Info] [System] [Unknown] [PID:31564] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:26.829] [Info] [System] [Unknown] [PID:36300] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:35.923] [Info] [System] [Unknown] [PID:24884] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:41.829] [Info] [System] [Unknown] [PID:2200] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:50.905] [Info] [System] [Unknown] [PID:5404] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:36:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:36:56.840] [Info] [System] [Unknown] [PID:17004] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:05.889] [Info] [System] [Unknown] [PID:25696] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:11.852] [Info] [System] [Unknown] [PID:13532] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:21.021] [Info] [System] [Unknown] [PID:14916] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:26.837] [Info] [System] [Unknown] [PID:2200] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:35.957] [Info] [System] [Unknown] [PID:36880] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:41.806] [Info] [System] [Unknown] [PID:30492] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:50.984] [Info] [System] [Unknown] [PID:32720] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:37:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:37:56.833] [Info] [System] [Unknown] [PID:24380] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:05.929] [Info] [System] [Unknown] [PID:5372] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:17
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:17.721] [Info] [System] [Unknown] [PID:28324] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:20.925] [Info] [System] [Unknown] [PID:30584] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:26.863] [Info] [System] [Unknown] [PID:10084] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:35.931] [Info] [System] [Unknown] [PID:28924] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:41.907] [Info] [System] [Unknown] [PID:16636] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:50.925] [Info] [System] [Unknown] [PID:26612] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:38:59
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:38:59.544] [Info] [System] [Unknown] [PID:15448] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:05.904] [Info] [System] [Unknown] [PID:4664] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:11.829] [Info] [System] [Unknown] [PID:34180] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:20.896] [Info] [System] [Unknown] [PID:28472] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:26.869] [Info] [System] [Unknown] [PID:29600] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:35.933] [Info] [System] [Unknown] [PID:6112] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:41.762] [Info] [System] [Unknown] [PID:30880] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:50.859] [Info] [System] [Unknown] [PID:39828] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:39:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:39:56.875] [Info] [System] [Unknown] [PID:9872] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:06.038] [Info] [System] [Unknown] [PID:39316] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:11.767] [Info] [System] [Unknown] [PID:12160] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:20.858] [Info] [System] [Unknown] [PID:2492] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:26.793] [Info] [System] [Unknown] [PID:32684] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:35.846] [Info] [System] [Unknown] [PID:32868] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:41.759] [Info] [System] [Unknown] [PID:30840] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:50.873] [Info] [System] [Unknown] [PID:17380] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:40:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:40:56.800] [Info] [System] [Unknown] [PID:28576] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:41:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:41:05.906] [Info] [System] [Unknown] [PID:31140] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:41:11
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:41:11.798] [Info] [System] [Unknown] [PID:36032] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:41:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:41:21.005] [Info] [System] [Unknown] [PID:3184] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:54:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:54:05.506] [Info] [System] [Unknown] [PID:6396] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:54:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:54:20.473] [Info] [System] [Unknown] [PID:15128] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:54:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:54:35.389] [Info] [System] [Unknown] [PID:4704] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:54:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:54:50.460] [Info] [System] [Unknown] [PID:8392] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:55:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:55:05.400] [Info] [System] [Unknown] [PID:37860] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:55:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:55:20.407] [Info] [System] [Unknown] [PID:28328] [TID:14] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 05:55:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 05:55:35.400] [Info] [System] [Unknown] [PID:22556] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:00:51
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:00:51.984] [Info] [System] [Unknown] [PID:8416] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:01:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:01:03.949] [Info] [System] [Unknown] [PID:10936] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:01:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:01:19.064] [Info] [System] [Unknown] [PID:8904] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:01:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:01:34.008] [Info] [System] [Unknown] [PID:35512] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:01:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:01:49.037] [Info] [System] [Unknown] [PID:38824] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:02:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:02:03.983] [Info] [System] [Unknown] [PID:8160] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:02:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:02:27.242] [Info] [System] [Unknown] [PID:33804] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:02:41
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:02:42.229] [Info] [System] [Unknown] [PID:14888] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:02:56
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:02:57.207] [Info] [System] [Unknown] [PID:29268] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:07:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:07:50.729] [Info] [System] [Unknown] [PID:2840] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:08:06
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:08:06.615] [Info] [System] [Unknown] [PID:1960] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:08:23
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:08:23.768] [Info] [System] [Unknown] [PID:23556] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:08:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:08:35.717] [Info] [System] [Unknown] [PID:32120] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:08:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:08:50.743] [Info] [System] [Unknown] [PID:4944] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:09:14
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:09:14.943] [Info] [System] [Unknown] [PID:30392] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:09:29
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:09:29.953] [Info] [System] [Unknown] [PID:14976] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:09:44
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:09:44.926] [Info] [System] [Unknown] [PID:18824] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:10:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:10:50.958] [Info] [System] [Unknown] [PID:33812] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:11:02
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:11:03.001] [Info] [System] [Unknown] [PID:38980] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:11:26
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:11:27.165] [Info] [System] [Unknown] [PID:3852] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:11:32
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:11:33.004] [Info] [System] [Unknown] [PID:16520] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:11:47
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:11:47.996] [Info] [System] [Unknown] [PID:32108] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:15:59
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:16:00.179] [Info] [System] [Unknown] [PID:4384] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:16:09
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:16:09.900] [Info] [System] [Unknown] [PID:15268] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:16:24
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:16:24.869] [Info] [System] [Unknown] [PID:21384] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:16:39
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:16:39.929] [Info] [System] [Unknown] [PID:8736] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:16:54
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:16:54.909] [Info] [System] [Unknown] [PID:22532] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:17:09
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:17:09.914] [Info] [System] [Unknown] [PID:2352] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:17:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:17:30.856] [Info] [System] [Unknown] [PID:9036] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:17:39
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:17:39.934] [Info] [System] [Unknown] [PID:22812] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:17:54
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:17:54.880] [Info] [System] [Unknown] [PID:28324] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:18:09
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:18:09.905] [Info] [System] [Unknown] [PID:2684] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:18:24
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:18:24.980] [Info] [System] [Unknown] [PID:38776] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:18:39
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:18:39.908] [Info] [System] [Unknown] [PID:39660] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:18:54
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:18:54.889] [Info] [System] [Unknown] [PID:33168] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:19:09
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:19:09.881] [Info] [System] [Unknown] [PID:5516] [TID:14] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:21:44
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:21:44.847] [Info] [System] [Unknown] [PID:37688] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:22:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:22:18.817] [Info] [System] [Unknown] [PID:37468] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:22:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:22:33.809] [Info] [System] [Unknown] [PID:29920] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:22:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:22:48.784] [Info] [System] [Unknown] [PID:17976] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:23:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:23:03.809] [Info] [System] [Unknown] [PID:7716] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:23:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:23:18.832] [Info] [System] [Unknown] [PID:23616] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:23:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:23:33.776] [Info] [System] [Unknown] [PID:31092] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:23:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:23:48.823] [Info] [System] [Unknown] [PID:34776] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:24:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:24:03.803] [Info] [System] [Unknown] [PID:26080] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:24:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:24:18.840] [Info] [System] [Unknown] [PID:1224] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:24:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:24:33.791] [Info] [System] [Unknown] [PID:28368] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:24:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:24:48.841] [Info] [System] [Unknown] [PID:33696] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:01.229] [Info] [System] [Unknown] [PID:17776] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:03.849] [Info] [System] [Unknown] [PID:22072] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:16.202] [Info] [System] [Unknown] [PID:9876] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:18.801] [Info] [System] [Unknown] [PID:36148] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:31.173] [Info] [System] [Unknown] [PID:39080] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:33.793] [Info] [System] [Unknown] [PID:9876] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:25:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:25:46.176] [Info] [System] [Unknown] [PID:30324] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:26:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:26:01.170] [Info] [System] [Unknown] [PID:17012] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:26:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:26:16.127] [Info] [System] [Unknown] [PID:30976] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:26:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:26:31.188] [Info] [System] [Unknown] [PID:25396] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:26:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:26:46.167] [Info] [System] [Unknown] [PID:11296] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:27:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:27:01.192] [Info] [System] [Unknown] [PID:34328] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:27:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:27:16.225] [Info] [System] [Unknown] [PID:36016] [TID:18] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:27:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:27:31.178] [Info] [System] [Unknown] [PID:34140] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:27:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:27:46.171] [Info] [System] [Unknown] [PID:35404] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:28:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:28:01.250] [Info] [System] [Unknown] [PID:32868] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:28:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:28:16.189] [Info] [System] [Unknown] [PID:33084] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:28:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:28:31.169] [Info] [System] [Unknown] [PID:36088] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:28:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:28:46.184] [Info] [System] [Unknown] [PID:2268] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:29:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:29:01.225] [Info] [System] [Unknown] [PID:2992] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:29:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:29:16.188] [Info] [System] [Unknown] [PID:18248] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:29:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:29:31.222] [Info] [System] [Unknown] [PID:28500] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:29:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:29:46.230] [Info] [System] [Unknown] [PID:17784] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:30:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:30:01.174] [Info] [System] [Unknown] [PID:35404] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:30:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:30:16.201] [Info] [System] [Unknown] [PID:33804] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:30:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:30:31.227] [Info] [System] [Unknown] [PID:35764] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:30:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:30:46.262] [Info] [System] [Unknown] [PID:16336] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:31:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:31:01.174] [Info] [System] [Unknown] [PID:31308] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:31:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:31:16.195] [Info] [System] [Unknown] [PID:30372] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:31:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:31:31.218] [Info] [System] [Unknown] [PID:39912] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:31:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:31:46.225] [Info] [System] [Unknown] [PID:23860] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:32:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:32:01.261] [Info] [System] [Unknown] [PID:24896] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:32:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:32:16.177] [Info] [System] [Unknown] [PID:12596] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:32:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:32:31.178] [Info] [System] [Unknown] [PID:14884] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:32:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:32:46.230] [Info] [System] [Unknown] [PID:6948] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:33:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:33:01.226] [Info] [System] [Unknown] [PID:25436] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:33:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:33:16.197] [Info] [System] [Unknown] [PID:26524] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:33:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:33:31.191] [Info] [System] [Unknown] [PID:35616] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:33:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:33:46.196] [Info] [System] [Unknown] [PID:8488] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:33:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:33:53.083] [Info] [System] [Unknown] [PID:16648] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:01.198] [Info] [System] [Unknown] [PID:38856] [TID:19] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:08.054] [Info] [System] [Unknown] [PID:28332] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:16.218] [Info] [System] [Unknown] [PID:34392] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:23.082] [Info] [System] [Unknown] [PID:7468] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:31.204] [Info] [System] [Unknown] [PID:31524] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:38.086] [Info] [System] [Unknown] [PID:30144] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:46.275] [Info] [System] [Unknown] [PID:31076] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:34:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:34:53.078] [Info] [System] [Unknown] [PID:8736] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:01.270] [Info] [System] [Unknown] [PID:25128] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:08.081] [Info] [System] [Unknown] [PID:23472] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:16.229] [Info] [System] [Unknown] [PID:36828] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:23.064] [Info] [System] [Unknown] [PID:34492] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:31.238] [Info] [System] [Unknown] [PID:16788] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:38.128] [Info] [System] [Unknown] [PID:35584] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:46.218] [Info] [System] [Unknown] [PID:13908] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:35:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:35:53.089] [Info] [System] [Unknown] [PID:34892] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:01.201] [Info] [System] [Unknown] [PID:39428] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:08.093] [Info] [System] [Unknown] [PID:10928] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:16.227] [Info] [System] [Unknown] [PID:26256] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:23.115] [Info] [System] [Unknown] [PID:31756] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:31.217] [Info] [System] [Unknown] [PID:26080] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:33.590] [Info] [System] [Unknown] [PID:4860] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:38.061] [Info] [System] [Unknown] [PID:16804] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:46.232] [Info] [System] [Unknown] [PID:14320] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:48.590] [Info] [System] [Unknown] [PID:39660] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:36:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:36:53.073] [Info] [System] [Unknown] [PID:8528] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:01.227] [Info] [System] [Unknown] [PID:20216] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:03.593] [Info] [System] [Unknown] [PID:30236] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:08.129] [Info] [System] [Unknown] [PID:3184] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:16.200] [Info] [System] [Unknown] [PID:39868] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:18.633] [Info] [System] [Unknown] [PID:456] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:23.058] [Info] [System] [Unknown] [PID:33696] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:31.170] [Info] [System] [Unknown] [PID:13008] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:33.573] [Info] [System] [Unknown] [PID:26136] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:38.069] [Info] [System] [Unknown] [PID:30276] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:46.178] [Info] [System] [Unknown] [PID:33868] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:48.612] [Info] [System] [Unknown] [PID:11612] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:37:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:37:53.087] [Info] [System] [Unknown] [PID:36208] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:01.169] [Info] [System] [Unknown] [PID:26524] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:03.572] [Info] [System] [Unknown] [PID:34744] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:08.076] [Info] [System] [Unknown] [PID:33868] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:16.161] [Info] [System] [Unknown] [PID:35720] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:18.517] [Info] [System] [Unknown] [PID:9732] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:23.019] [Info] [System] [Unknown] [PID:11812] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:31.231] [Info] [System] [Unknown] [PID:39708] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:33.557] [Info] [System] [Unknown] [PID:25428] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:38.049] [Info] [System] [Unknown] [PID:39040] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:46.219] [Info] [System] [Unknown] [PID:3852] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:48.607] [Info] [System] [Unknown] [PID:31604] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:38:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:38:53.057] [Info] [System] [Unknown] [PID:23700] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:01.219] [Info] [System] [Unknown] [PID:32480] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:03.614] [Info] [System] [Unknown] [PID:30784] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:08.091] [Info] [System] [Unknown] [PID:7704] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:16.187] [Info] [System] [Unknown] [PID:30324] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:18.613] [Info] [System] [Unknown] [PID:7692] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:23.053] [Info] [System] [Unknown] [PID:33136] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:31.241] [Info] [System] [Unknown] [PID:27624] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:33.672] [Info] [System] [Unknown] [PID:19100] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:38.041] [Info] [System] [Unknown] [PID:23852] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:46.190] [Info] [System] [Unknown] [PID:25944] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:48.574] [Info] [System] [Unknown] [PID:27388] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:39:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:39:53.101] [Info] [System] [Unknown] [PID:33076] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:01.177] [Info] [System] [Unknown] [PID:4860] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:03.542] [Info] [System] [Unknown] [PID:28440] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:08.065] [Info] [System] [Unknown] [PID:19100] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:16.175] [Info] [System] [Unknown] [PID:31052] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:18.537] [Info] [System] [Unknown] [PID:36456] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:23.132] [Info] [System] [Unknown] [PID:31236] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:31.177] [Info] [System] [Unknown] [PID:9848] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:33.549] [Info] [System] [Unknown] [PID:37808] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:38.052] [Info] [System] [Unknown] [PID:5764] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:46.213] [Info] [System] [Unknown] [PID:31920] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:48.539] [Info] [System] [Unknown] [PID:15656] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:40:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:40:53.057] [Info] [System] [Unknown] [PID:32792] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:01.195] [Info] [System] [Unknown] [PID:8368] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:03.545] [Info] [System] [Unknown] [PID:23776] [TID:14] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:08.070] [Info] [System] [Unknown] [PID:5480] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:16.176] [Info] [System] [Unknown] [PID:34220] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:18.548] [Info] [System] [Unknown] [PID:4992] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:23.081] [Info] [System] [Unknown] [PID:33080] [TID:14] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:31.194] [Info] [System] [Unknown] [PID:17796] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:33.549] [Info] [System] [Unknown] [PID:30324] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:38.063] [Info] [System] [Unknown] [PID:17460] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:46.175] [Info] [System] [Unknown] [PID:19104] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:48.524] [Info] [System] [Unknown] [PID:2124] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:41:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:41:53.105] [Info] [System] [Unknown] [PID:33680] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:01.204] [Info] [System] [Unknown] [PID:21724] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:03.574] [Info] [System] [Unknown] [PID:36296] [TID:18] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:08.071] [Info] [System] [Unknown] [PID:22308] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:10.957] [Info] [System] [Unknown] [PID:14812] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:16.203] [Info] [System] [Unknown] [PID:4840] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:18.570] [Info] [System] [Unknown] [PID:4860] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:23.066] [Info] [System] [Unknown] [PID:4660] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:25.932] [Info] [System] [Unknown] [PID:15452] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:31.188] [Info] [System] [Unknown] [PID:9848] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:33.556] [Info] [System] [Unknown] [PID:26420] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:38.091] [Info] [System] [Unknown] [PID:14164] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:40.932] [Info] [System] [Unknown] [PID:38904] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:46.144] [Info] [System] [Unknown] [PID:30332] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:48.528] [Info] [System] [Unknown] [PID:32672] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:53.045] [Info] [System] [Unknown] [PID:15356] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:42:55
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:42:55.934] [Info] [System] [Unknown] [PID:22696] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:01.221] [Info] [System] [Unknown] [PID:40020] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:03.520] [Info] [System] [Unknown] [PID:40640] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:08.006] [Info] [System] [Unknown] [PID:39960] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:10.908] [Info] [System] [Unknown] [PID:40080] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:16.180] [Info] [System] [Unknown] [PID:40780] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:18.524] [Info] [System] [Unknown] [PID:40328] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:23.048] [Info] [System] [Unknown] [PID:40360] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:25.924] [Info] [System] [Unknown] [PID:32208] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:31.165] [Info] [System] [Unknown] [PID:40436] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:33.584] [Info] [System] [Unknown] [PID:40056] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:38.028] [Info] [System] [Unknown] [PID:26400] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:41.019] [Info] [System] [Unknown] [PID:40840] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:46.183] [Info] [System] [Unknown] [PID:31752] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:48.563] [Info] [System] [Unknown] [PID:32672] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:53.042] [Info] [System] [Unknown] [PID:40548] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:43:55
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:43:55.991] [Info] [System] [Unknown] [PID:40376] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:01.180] [Info] [System] [Unknown] [PID:20064] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:03.586] [Info] [System] [Unknown] [PID:40412] [TID:15] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:08.046] [Info] [System] [Unknown] [PID:39580] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:10.974] [Info] [System] [Unknown] [PID:40440] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:16.164] [Info] [System] [Unknown] [PID:20284] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:18.558] [Info] [System] [Unknown] [PID:37192] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:23.047] [Info] [System] [Unknown] [PID:14076] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:25.948] [Info] [System] [Unknown] [PID:21376] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:31.188] [Info] [System] [Unknown] [PID:40248] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:33.527] [Info] [System] [Unknown] [PID:27612] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:38.135] [Info] [System] [Unknown] [PID:31024] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:40.932] [Info] [System] [Unknown] [PID:31828] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:46.185] [Info] [System] [Unknown] [PID:39256] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:48.526] [Info] [System] [Unknown] [PID:33280] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:53.065] [Info] [System] [Unknown] [PID:24824] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:44:55
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:44:55.956] [Info] [System] [Unknown] [PID:37196] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:01.218] [Info] [System] [Unknown] [PID:10584] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:03.528] [Info] [System] [Unknown] [PID:34608] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:08.133] [Info] [System] [Unknown] [PID:26200] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:10.966] [Info] [System] [Unknown] [PID:33432] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:16.171] [Info] [System] [Unknown] [PID:40096] [TID:14] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:16
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:16.551] [Info] [System] [Unknown] [PID:39984] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:18.573] [Info] [System] [Unknown] [PID:30984] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:23.128] [Info] [System] [Unknown] [PID:15640] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:25.948] [Info] [System] [Unknown] [PID:15340] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:31.210] [Info] [System] [Unknown] [PID:40424] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:31
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:31.604] [Info] [System] [Unknown] [PID:28236] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:33.595] [Info] [System] [Unknown] [PID:4628] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:38.118] [Info] [System] [Unknown] [PID:30276] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:40.932] [Info] [System] [Unknown] [PID:6552] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:46.172] [Info] [System] [Unknown] [PID:35708] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:46
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:46.561] [Info] [System] [Unknown] [PID:18360] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:48.507] [Info] [System] [Unknown] [PID:40336] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:53.022] [Info] [System] [Unknown] [PID:28472] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:45:55
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:45:55.913] [Info] [System] [Unknown] [PID:6232] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:01.168] [Info] [System] [Unknown] [PID:39624] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:01
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:01.522] [Info] [System] [Unknown] [PID:27920] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:03.510] [Info] [System] [Unknown] [PID:11472] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:08.048] [Info] [System] [Unknown] [PID:31780] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:10.933] [Info] [System] [Unknown] [PID:40044] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:16.160] [Info] [System] [Unknown] [PID:35212] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:16
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:16.523] [Info] [System] [Unknown] [PID:38100] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:18.511] [Info] [System] [Unknown] [PID:39640] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:23.058] [Info] [System] [Unknown] [PID:24312] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:25.936] [Info] [System] [Unknown] [PID:16644] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:31.248] [Info] [System] [Unknown] [PID:34392] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:31
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:31.538] [Info] [System] [Unknown] [PID:40888] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:33.551] [Info] [System] [Unknown] [PID:40900] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:38.036] [Info] [System] [Unknown] [PID:36704] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:40.978] [Info] [System] [Unknown] [PID:15936] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:45
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:46.233] [Info] [System] [Unknown] [PID:40240] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:46
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:46.569] [Info] [System] [Unknown] [PID:34708] [TID:4] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:48
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:48.656] [Info] [System] [Unknown] [PID:35328] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:52
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:53.150] [Info] [System] [Unknown] [PID:22812] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:46:55
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:46:55.977] [Info] [System] [Unknown] [PID:28032] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:00
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:01.267] [Info] [System] [Unknown] [PID:40164] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:01
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:01.587] [Info] [System] [Unknown] [PID:40784] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:03
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:03.575] [Info] [System] [Unknown] [PID:36564] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:05.525] [Info] [System] [Unknown] [PID:35232] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:07
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:08.078] [Info] [System] [Unknown] [PID:30372] [TID:3] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:10
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:10.976] [Info] [System] [Unknown] [PID:35328] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:15
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:16.241] [Info] [System] [Unknown] [PID:12156] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:16
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:16.661] [Info] [System] [Unknown] [PID:2836] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:18
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:18.586] [Info] [System] [Unknown] [PID:8040] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:20.515] [Info] [System] [Unknown] [PID:3380] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:22
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:23.179] [Info] [System] [Unknown] [PID:38064] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:25
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:26.004] [Info] [System] [Unknown] [PID:31216] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:30
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:31.239] [Info] [System] [Unknown] [PID:40136] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:31
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:31.581] [Info] [System] [Unknown] [PID:428] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:33
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:33.620] [Info] [System] [Unknown] [PID:13032] [TID:17] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:35.482] [Info] [System] [Unknown] [PID:25400] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:37
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:38.082] [Info] [System] [Unknown] [PID:19540] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:40
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:41.021] [Info] [System] [Unknown] [PID:26256] [TID:6] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:46
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:46.569] [Info] [System] [Unknown] [PID:30792] [TID:13] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:47:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:47:50.463] [Info] [System] [Unknown] [PID:34884] [TID:11] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:48:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:48:05.410] [Info] [System] [Unknown] [PID:19096] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:48:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:48:20.409] [Info] [System] [Unknown] [PID:40320] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:48:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:48:35.466] [Info] [System] [Unknown] [PID:28032] [TID:5] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:48:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:48:50.389] [Info] [System] [Unknown] [PID:18160] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:49:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:49:05.401] [Info] [System] [Unknown] [PID:40276] [TID:10] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:49:20
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:49:20.414] [Info] [System] [Unknown] [PID:31168] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:49:35
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:49:35.436] [Info] [System] [Unknown] [PID:26372] [TID:9] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:49:50
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:49:50.393] [Info] [System] [Unknown] [PID:13452] [TID:16] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:50:05
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:50:05.461] [Info] [System] [Unknown] [PID:36564] [TID:12] Logging system initialized successfully
+========================================
+PC Optimization Suite - Log File
+Initialized: 2025-09-21 06:53:27
+System: DESKTOP-KJ7O1UK
+User: drema
+OS: Microsoft Windows 11 Pro
+PowerShell: 5.1.26100.6584
+========================================
+
+[2025-09-21 06:53:28.195] [Info] [System] [Unknown] [PID:16936] [TID:5] Logging system initialized successfully

@@ -1,0 +1,29 @@
+﻿{
+    "SystemInfo":  {
+                       "AvailableRAM":  43.2,
+                       "CPU":  "AMD Ryzen 7 5800X 8-Core Processor             ",
+                       "TotalRAM":  63.91,
+                       "OS":  "Microsoft Windows 11 Pro"
+                   },
+    "Timestamp":  {
+                      "value":  "\/Date(1758449897790)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Sunday, September 21, 2025 6:18:17 AM"
+                  },
+    "Results":  {
+                    "CPU":  {
+                                "IterationsPerSecond":  956,
+                                "Score":  19130
+                            },
+                    "Memory":  {
+                                   "WriteSpeed":  2468.4,
+                                   "Score":  24684
+                               },
+                    "Storage":  {
+                                    "WriteSpeed":  979.34,
+                                    "Score":  48967,
+                                    "ReadSpeed":  979.34
+                                }
+                },
+    "OverallScore":  30927
+}
