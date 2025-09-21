@@ -1,4 +1,335 @@
-# 🚀 PC Optimization Suite v2.5.1 - LATEST VERSION
+# 🚀 PC Optimization Suite v2.6.1
+
+A professional Windows system optimization tool with advanced analytics, AI-powered recommendations, and gaming performance enhancements. **Bug fix release with improved stability.**
+
+![Version](https://img.shields.io/badge/version-2.6.1-blue.svg)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-stable-green.svg)
+
+## ✨ Features
+
+### 🎯 **User Profiles System**
+- **Beginner Mode**: Simplified interface with essential optimization tools
+- **Intermediate Mode**: Balanced interface with performance monitoring and analytics
+- **Professional Mode**: Full feature set including AI recommendations and advanced gaming tools
+
+### 📊 **Advanced Analytics Dashboard** *(Phase 5)*
+- Real-time CPU, RAM, and disk usage monitoring
+- Temperature monitoring for system components
+- Network usage tracking and analysis
+- Performance trend analysis with historical data
+- HTML report export functionality
+- Interactive performance graphs and charts
+
+### 🤖 **AI-Powered Optimization Engine** *(Phase 6)*
+- Machine learning pattern analysis
+- Smart optimization recommendations based on usage patterns
+- Automatic system maintenance scheduling
+- Performance degradation detection
+- User behavior tracking with confidence scoring
+- Persistent recommendation data storage
+
+### 🎮 **Gaming Performance Suite** *(Phase 7)*
+- Automatic game detection (Steam, Epic Games, Origin, etc.)
+- Gaming mode toggle for optimal performance
+- Game-specific optimization profiles
+- FPS monitoring and performance tracking
+- Quick game boost functionality
+- Performance profile management
+
+### 🖥️ **System Tray Integration**
+- Minimize to system tray for background operation
+- Quick access context menu
+- Background monitoring capabilities
+- Clean startup and shutdown handling
+
+### 💻 **Core Optimization Tools**
+- **Registry Optimization**: Clean and optimize Windows registry
+- **Disk Cleanup**: Remove temporary files and system junk
+- **Memory Optimization**: RAM cleanup and memory management
+- **Startup Manager**: Control startup programs
+- **Windows Update Management**: Force updates and manage settings
+- **Driver Intelligence**: Advanced driver detection and updates
+- **Run Smoother**: Comprehensive system performance boost
+
+### 🎨 **Modern Interface**
+- Professional Windows Forms GUI
+- Multiple theme support (Dark, Light, Blue, Green)
+- Responsive layout design
+- Real-time system monitoring
+- Live time display with elegant styling
+- Performance score calculation and display
+
+## 🛠️ Installation
+
+### Prerequisites
+- Windows 10/11 (Administrator privileges required)
+- PowerShell 5.1 or later
+- .NET Framework 4.5 or later
+
+### Quick Start
+1. **Download** the latest release from the [Releases page](../../releases)
+2. **Extract** the files to your desired location
+3. **Right-click** on `PCOptimizationGUI.ps1` → "Run with PowerShell"
+4. **Choose** your user profile (Beginner/Intermediate/Professional)
+
+### Alternative Launch Methods
+```powershell
+# GUI Mode (Default)
+.\PCOptimizationGUI.ps1
+
+# Console Mode
+.\PCOptimizationGUI.ps1 -NoGUI
+
+# Quick Launch
+.\LAUNCH_V2.6.1.bat
+```
+
+## 🔧 **v2.6.1 Bug Fixes**
+
+This release fixes small bugs found in v2.6.0:
+- ✅ **Fixed syntax errors** - Script now loads without PowerShell parsing issues
+- ✅ **Improved stability** - Better error handling and resource management
+- ✅ **Enhanced compatibility** - Works reliably across different Windows configurations
+- ✅ **Performance improvements** - Faster startup and reduced memory usage
+
+All major features from v2.6.0 remain fully functional and enhanced!
+
+## 📋 Usage Guide
+
+### Getting Started
+1. **Launch** the application as Administrator
+2. **Select** your preferred user profile:
+   - **Beginner**: Essential tools only, simplified interface
+   - **Intermediate**: Includes analytics dashboard and gaming features
+   - **Professional**: Full feature set with AI recommendations
+
+3. **Use System Tray**: Click "📥 Minimize to Tray" to run in background
+
+### Core Features
+
+#### 🔧 Basic Optimization
+- Click **"Optimize Registry"** to clean Windows registry
+- Use **"Clean Disk Space"** to remove temporary files
+- Select **"Optimize Memory"** for RAM cleanup
+- Access **"Startup Manager"** to control boot programs
+
+#### 📊 Analytics Dashboard *(Intermediate+)*
+- Monitor real-time system performance
+- View temperature readings and network usage
+- Export performance reports in HTML format
+- Track performance trends over time
+
+#### 🤖 AI Recommendations *(Professional)*
+- Review AI-generated optimization suggestions
+- Apply recommended system improvements
+- Monitor pattern analysis results
+- Schedule automatic maintenance
+
+#### 🎮 Gaming Mode *(Intermediate+)*
+- Toggle gaming mode for optimal performance
+- Create game-specific optimization profiles
+- Monitor FPS during gameplay
+- Use quick boost for immediate performance gains
+
+### System Tray Features
+- **Show/Hide**: Double-click tray icon
+- **Quick Actions**: Right-click for context menu
+- **Background Monitoring**: Continues monitoring when minimized
+
+## 🎯 User Profiles Explained
+
+### 👶 Beginner Profile
+**Perfect for new users who want simple, effective optimization**
+- Clean, minimal interface
+- Essential optimization tools only
+- Large buttons and clear labels
+- Basic system information display
+- Tooltips and guidance
+
+### ⚖️ Intermediate Profile
+**Ideal for users who want performance monitoring**
+- Balanced feature set
+- Analytics dashboard included
+- Gaming performance tools
+- Medium-sized interface elements
+- Performance graphs and charts
+
+### 👨‍💼 Professional Profile
+**For power users and IT professionals**
+- Complete feature access
+- AI-powered recommendations
+- Advanced gaming suite
+- Detailed logging and analytics
+- All monitoring capabilities
+- Export and reporting tools
+
+## 📁 Project Structure
+
+```
+PC-Optimization-Suite/
+├── PCOptimizationGUI.ps1          # Main application
+├── README.md                      # This file
+├── SETUP_GUIDE.md                 # Detailed setup instructions
+├── FUTURE_PHASES_ROADMAP.md       # Development roadmap
+├── EASY_LAUNCH.bat                # Quick launch script
+├── Data/                          # Application data
+│   ├── OptimizationSettings.json  # User settings
+│   ├── HardwareFingerprint.json   # System profile
+│   └── Benchmark_*.json           # Performance data
+├── Logs/                          # Application logs
+│   ├── Operations.log             # General operations
+│   ├── Performance.log            # Performance data
+│   └── SystemOptimization.log     # Optimization history
+└── Demo_Distribution/             # Portable version
+    └── PC_Optimization_Suite_Portable.zip
+```
+
+## ⚡ Performance Features
+
+### Real-Time Monitoring
+- **CPU Usage**: Live percentage with history graphs
+- **Memory Usage**: RAM utilization tracking
+- **Disk Activity**: Read/write operations monitoring
+- **Temperature**: System component temperature readings
+- **Network**: Upload/download speed tracking
+
+### Optimization Tools
+- **Registry Cleaner**: Removes invalid registry entries
+- **Disk Cleanup**: Clears temporary files and caches
+- **Memory Optimizer**: Frees up RAM and optimizes usage
+- **Startup Control**: Manages programs that start with Windows
+- **Driver Updates**: Intelligent driver detection and updates
+
+### Gaming Enhancements
+- **Game Detection**: Automatically finds installed games
+- **Performance Profiles**: Game-specific optimization settings
+- **FPS Monitoring**: Real-time frame rate tracking
+- **Gaming Mode**: Optimizes system for gaming performance
+- **Quick Boost**: Instant performance enhancement
+
+## 🔧 Advanced Configuration
+
+### Settings File Location
+```
+%USERPROFILE%\Documents\PC-Optimization-Suite\OptimizationSettings.json
+```
+
+### Customizing User Profiles
+Edit the user profile settings in the script or through the GUI:
+- Adjust feature visibility
+- Modify button sizes
+- Change maximum feature limits
+- Configure auto-refresh intervals
+
+### System Tray Configuration
+```powershell
+$script:TrayEnabled = $true  # Enable/disable system tray
+```
+
+## 🚨 Troubleshooting
+
+### Common Issues
+
+#### **"Execution Policy" Error**
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+#### **"Administrator Privileges Required"**
+- Right-click PowerShell → "Run as Administrator"
+- Or right-click the script → "Run with PowerShell"
+
+#### **GUI Not Loading**
+```powershell
+# Run in console mode for debugging
+.\PCOptimizationGUI.ps1 -NoGUI
+```
+
+#### **Performance Counters Missing**
+- Restart the application as Administrator
+- Check Windows Performance Toolkit installation
+
+### Log Files
+Check these log files for detailed error information:
+- `Logs\Operations.log` - General application logs
+- `Logs\SystemErrors.log` - Error messages
+- `Logs\Performance.log` - Performance monitoring logs
+
+## 🔄 Version History
+
+### v2.6.1 - Bug Fix Release *(Latest)*
+- 🔧 **Fixed syntax errors** - Resolved PowerShell parsing issues
+- 🔧 **Improved stability** - Enhanced error handling and resource management
+- 🔧 **Performance optimizations** - Faster startup and reduced memory usage
+- 🔧 **Enhanced compatibility** - Better reliability across Windows configurations
+
+### v2.6.0 - Major Feature Update
+- ✅ **Advanced Analytics Dashboard** with real-time monitoring
+- ✅ **AI-Powered Optimization Engine** with smart recommendations
+- ✅ **Gaming Performance Suite** with FPS monitoring
+- ✅ **User Profile System** (Beginner/Intermediate/Professional)
+- ✅ **System Tray Integration** with background operation
+- ✅ Enhanced UI with professional styling
+
+### v2.5.1 - Interface Enhancements
+- Improved live time display
+- Enhanced theme system
+- Better error handling
+- Performance optimizations
+
+### v2.5.0 - Modern Interface Update
+- Windows Forms GUI implementation
+- Real-time dashboards
+- Live system monitoring
+- Enhanced optimization tools
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our contributing guidelines:
+
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Make** your changes
+4. **Test** thoroughly
+5. **Submit** a pull request
+
+### Development Setup
+```powershell
+# Clone the repository
+git clone https://github.com/yourusername/PC-Optimization-Suite.git
+
+# Navigate to directory
+cd PC-Optimization-Suite
+
+# Run in development mode
+.\PCOptimizationGUI.ps1
+```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](../../issues)
+- **Discussions**: [GitHub Discussions](../../discussions)
+- **Documentation**: [Wiki](../../wiki)
+
+## 🌟 Acknowledgments
+
+- Windows Forms framework for the professional GUI
+- PowerShell community for optimization techniques
+- Beta testers and contributors
+- Open source performance monitoring tools
+
+---
+
+**⚠️ Important**: Always run system optimization tools as Administrator for full functionality. Create a system restore point before making significant changes.
+
+**🎯 Made with ❤️ for the Windows optimization community** Suite v2.5.1 - LATEST VERSION
 
 ## ⚠️ IMPORTANT: This is the NEWEST and BEST version!
 **If you found an older version somewhere else, ignore it and use this one instead!**

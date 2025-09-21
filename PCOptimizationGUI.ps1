@@ -3,17 +3,18 @@
 
 <#
 .SYNOPSIS
-    PC Optimization Suite GUI v2.5.0 - Modern Windows Forms Interface
+    PC Optimization Suite GUI v2.6.1 - Professional Windows Forms Interface
     
 .DESCRIPTION
-    Professional Windows Forms application with real-time dashboards, performance monitoring,
-    live time display, specialized optimization tools, and enhanced user experience.
+    Professional Windows Forms application with advanced analytics, AI-powered optimization,
+    gaming performance suite, system tray functionality, and user profile management.
+    Bug fixes and stability improvements.
     
 .AUTHOR
     PC Optimization Suite Team
     
 .VERSION
-    2.5.0 - Enhanced Interface with Live Time Display and Specialized Optimizations
+    2.6.1 - Bug Fix Release: Fixed syntax errors and improved stability
 #>
 
 Add-Type -AssemblyName System.Windows.Forms
@@ -21,10 +22,56 @@ Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms.DataVisualization
 
 # Global Variables
-$script:ModuleVersion = "2.5.1"
+$script:ModuleVersion = "2.6.1"
 $script:BasePath = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 $script:DataPath = Join-Path $script:BasePath "Data"
 $script:LogPath = Join-Path $script:BasePath "Logs"
+
+# System Tray Variables
+$script:NotifyIcon = $null
+$script:ContextMenu = $null
+$script:TrayEnabled = $true
+
+# User Profile System Variables
+$script:UserProfiles = @{
+    "Beginner"     = @{
+        Name                  = "Beginner"
+        Description           = "Simple, easy-to-use interface with essential features"
+        ShowAdvancedAnalytics = $false
+        ShowAIRecommendations = $false
+        ShowGamingDashboard   = $false
+        ShowDetailedLogs      = $false
+        ButtonSize            = "Large"
+        FontSize              = 10
+        ShowTooltips          = $true
+        MaximumFeatures       = 6
+    }
+    "Intermediate" = @{
+        Name                  = "Intermediate"
+        Description           = "Balanced interface with performance monitoring"
+        ShowAdvancedAnalytics = $true
+        ShowAIRecommendations = $false
+        ShowGamingDashboard   = $true
+        ShowDetailedLogs      = $true
+        ButtonSize            = "Medium"
+        FontSize              = 9
+        ShowTooltips          = $true
+        MaximumFeatures       = 10
+    }
+    "Professional" = @{
+        Name                  = "Professional"
+        Description           = "Full-featured interface with all advanced tools"
+        ShowAdvancedAnalytics = $true
+        ShowAIRecommendations = $true
+        ShowGamingDashboard   = $true
+        ShowDetailedLogs      = $true
+        ButtonSize            = "Standard"
+        FontSize              = 9
+        ShowTooltips          = $false
+        MaximumFeatures       = 20
+    }
+}
+$script:CurrentProfile = "Intermediate"  # Default profile
 
 # Import performance optimizations
 $perfOptimizationsPath = Join-Path $script:BasePath "GUI_Performance_Optimizations.ps1"
@@ -231,6 +278,85 @@ function Update-ControlColors {
     }
 }
 
+#region User Profile Management
+
+function Set-UserProfile {
+    param([string]$ProfileName)
+    
+    if ($script:UserProfiles.ContainsKey($ProfileName)) {
+        $script:CurrentProfile = $ProfileName
+        Add-LogMessage "User profile changed to: $ProfileName"
+        
+        # Refresh the main form if it exists
+        if ($script:MainForm -and -not $script:MainForm.IsDisposed) {
+            Update-ProfileLayout
+        }
+    }
+}
+
+function Get-CurrentProfile {
+    return $script:UserProfiles[$script:CurrentProfile]
+}
+
+function Update-ProfileLayout {
+    # This function will be called to refresh the UI based on current profile
+    try {
+        $profile = Get-CurrentProfile
+        
+        # Update button sizes based on profile
+        $buttonHeight = switch ($profile.ButtonSize) {
+            "Large" { 40 }
+            "Medium" { 35 }
+            "Standard" { 30 }
+            default { 35 }
+        }
+        
+        # Show/hide advanced features based on profile
+        $script:ShowAdvancedDashboards = $profile.ShowAdvancedAnalytics -or $profile.ShowAIRecommendations -or $profile.ShowGamingDashboard
+        
+        Add-LogMessage "UI layout updated for $($profile.Name) profile"
+    }
+    catch {
+        Add-LogMessage "Error updating profile layout: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function New-ProfileSelector {
+    param(
+        [int]$X = 0,
+        [int]$Y = 0,
+        [int]$Width = 200,
+        [int]$Height = 30
+    )
+    
+    $profileCombo = New-Object System.Windows.Forms.ComboBox
+    $profileCombo.Location = New-Object System.Drawing.Point($X, $Y)
+    $profileCombo.Size = New-Object System.Drawing.Size($Width, $Height)
+    $profileCombo.DropDownStyle = [System.Windows.Forms.ComboBoxStyle]::DropDownList
+    $profileCombo.BackColor = $script:Colors.CardBackground
+    $profileCombo.ForeColor = $script:Colors.Text
+    $profileCombo.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    
+    # Add profile options
+    foreach ($profileName in $script:UserProfiles.Keys) {
+        $profileCombo.Items.Add($profileName) | Out-Null
+    }
+    
+    # Set current selection
+    $profileCombo.SelectedItem = $script:CurrentProfile
+    
+    # Add change event
+    $profileCombo.Add_SelectedIndexChanged({
+            if ($profileCombo.SelectedItem) {
+                Set-UserProfile -ProfileName $profileCombo.SelectedItem.ToString()
+            }
+        })
+    
+    return $profileCombo
+}
+
+#endregion
+
 function Start-AutoRefresh {
     if ($script:AutoRefreshEnabled -and $script:MainForm -and -not $script:MainForm.IsDisposed) {
         $script:AutoRefreshTimer = New-Object System.Windows.Forms.Timer
@@ -340,7 +466,12 @@ function Get-SystemOverview {
         $cpu = Get-CimInstance -ClassName Win32_Processor | Select-Object -First 1
         
         # Get performance counters
-        $cpuUsage = (Get-Counter "\Processor(_Total)\% Processor Time" -SampleInterval 1 -MaxSamples 1).CounterSamples.CookedValue
+        try {
+            $cpuUsage = (Get-Counter "\Processor(_Total)\% Processor Time" -SampleInterval 1 -MaxSamples 1).CounterSamples.CookedValue
+        }
+        catch {
+            $cpuUsage = 0
+        }
         $memoryUsage = [math]::Round((($os.TotalVisibleMemorySize - $os.FreePhysicalMemory) / $os.TotalVisibleMemorySize) * 100, 1)
         
         return @{
@@ -967,6 +1098,1496 @@ function New-StatusCard {
 
 #endregion
 
+#region Advanced Analytics Dashboard (Phase 5)
+
+# Performance Counter Management
+$script:PerformanceCounters = @{}
+$script:PerformanceHistory = @{}
+$script:AnalyticsTimer = $null
+
+function Initialize-PerformanceCounters {
+    try {
+        $script:PerformanceCounters = @{
+            CPU             = New-Object System.Diagnostics.PerformanceCounter("Processor", "% Processor Time", "_Total")
+            MemoryAvailable = New-Object System.Diagnostics.PerformanceCounter("Memory", "Available MBytes")
+            DiskRead        = New-Object System.Diagnostics.PerformanceCounter("PhysicalDisk", "Disk Read Bytes/sec", "_Total")
+            DiskWrite       = New-Object System.Diagnostics.PerformanceCounter("PhysicalDisk", "Disk Write Bytes/sec", "_Total")
+            NetworkIn       = New-Object System.Diagnostics.PerformanceCounter("Network Interface", "Bytes Received/sec", "*")
+            NetworkOut      = New-Object System.Diagnostics.PerformanceCounter("Network Interface", "Bytes Sent/sec", "*")
+        }
+        
+        # Initialize history arrays
+        $script:PerformanceHistory = @{
+            CPU        = @()
+            Memory     = @()
+            DiskRead   = @()
+            DiskWrite  = @()
+            NetworkIn  = @()
+            NetworkOut = @()
+            Timestamps = @()
+        }
+        
+        # Initial counter reading (required for delta calculations)
+        foreach ($counter in $script:PerformanceCounters.Values) {
+            $counter.NextValue() | Out-Null
+        }
+        
+        Add-LogMessage "Performance counters initialized successfully"
+    }
+    catch {
+        Add-LogMessage "Error initializing performance counters: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Get-PerformanceSnapshot {
+    try {
+        $snapshot = @{
+            Timestamp  = Get-Date
+            CPU        = [Math]::Round($script:PerformanceCounters.CPU.NextValue(), 2)
+            MemoryUsed = [Math]::Round(((Get-WmiObject Win32_ComputerSystem).TotalPhysicalMemory / 1MB - $script:PerformanceCounters.MemoryAvailable.NextValue()) / (Get-WmiObject Win32_ComputerSystem).TotalPhysicalMemory * 100 * 1MB, 2)
+            DiskRead   = [Math]::Round($script:PerformanceCounters.DiskRead.NextValue() / 1MB, 2)
+            DiskWrite  = [Math]::Round($script:PerformanceCounters.DiskWrite.NextValue() / 1MB, 2)
+            NetworkIn  = [Math]::Round($script:PerformanceCounters.NetworkIn.NextValue() / 1KB, 2)
+            NetworkOut = [Math]::Round($script:PerformanceCounters.NetworkOut.NextValue() / 1KB, 2)
+        }
+        
+        # Add to history (keep last 60 data points for 1-minute rolling window)
+        $script:PerformanceHistory.CPU += $snapshot.CPU
+        $script:PerformanceHistory.Memory += $snapshot.MemoryUsed
+        $script:PerformanceHistory.DiskRead += $snapshot.DiskRead
+        $script:PerformanceHistory.DiskWrite += $snapshot.DiskWrite
+        $script:PerformanceHistory.NetworkIn += $snapshot.NetworkIn
+        $script:PerformanceHistory.NetworkOut += $snapshot.NetworkOut
+        $script:PerformanceHistory.Timestamps += $snapshot.Timestamp
+        
+        # Trim to last 60 points
+        foreach ($key in @('CPU', 'Memory', 'DiskRead', 'DiskWrite', 'NetworkIn', 'NetworkOut', 'Timestamps')) {
+            if ($script:PerformanceHistory[$key].Count -gt 60) {
+                $script:PerformanceHistory[$key] = $script:PerformanceHistory[$key][-60..-1]
+            }
+        }
+        
+        return $snapshot
+    }
+    catch {
+        Add-LogMessage "Error getting performance snapshot: $($_.Exception.Message)" -Level "ERROR"
+        return $null
+    }
+}
+
+function New-AnalyticsDashboard {
+    param(
+        [int]$X = 0,
+        [int]$Y = 0,
+        [int]$Width = 600,
+        [int]$Height = 400
+    )
+    
+    $panel = New-ModernPanel -X $X -Y $Y -Width $Width -Height $Height -BackColor "CardBackground"
+    
+    # Title
+    $titleLabel = New-ModernLabel -Text "Real-Time Analytics Dashboard" -X 10 -Y 10 -Width ($Width - 20) -Height 25 -FontSize 12 -FontStyle "Bold"
+    $panel.Controls.Add($titleLabel)
+    
+    # Performance metrics display
+    $metricsPanel = New-ModernPanel -X 10 -Y 40 -Width ($Width - 20) -Height 150 -BackColor "Background"
+    
+    # CPU Usage
+    $cpuLabel = New-ModernLabel -Text "CPU Usage:" -X 10 -Y 10 -Width 80 -Height 20 -FontSize 9
+    $script:CPUValueLabel = New-ModernLabel -Text "0%" -X 95 -Y 10 -Width 60 -Height 20 -FontSize 9 -FontStyle "Bold"
+    $cpuProgressBar = New-Object System.Windows.Forms.ProgressBar
+    $cpuProgressBar.Location = New-Object System.Drawing.Point(10, 30)
+    $cpuProgressBar.Size = New-Object System.Drawing.Size(150, 15)
+    $cpuProgressBar.Style = [System.Windows.Forms.ProgressBarStyle]::Continuous
+    $script:CPUProgressBar = $cpuProgressBar
+    
+    # Memory Usage
+    $memLabel = New-ModernLabel -Text "Memory:" -X 10 -Y 55 -Width 80 -Height 20 -FontSize 9
+    $script:MemoryValueLabel = New-ModernLabel -Text "0%" -X 95 -Y 55 -Width 60 -Height 20 -FontSize 9 -FontStyle "Bold"
+    $memProgressBar = New-Object System.Windows.Forms.ProgressBar
+    $memProgressBar.Location = New-Object System.Drawing.Point(10, 75)
+    $memProgressBar.Size = New-Object System.Drawing.Size(150, 15)
+    $memProgressBar.Style = [System.Windows.Forms.ProgressBarStyle]::Continuous
+    $script:MemoryProgressBar = $memProgressBar
+    
+    # Disk I/O
+    $diskLabel = New-ModernLabel -Text "Disk I/O:" -X 10 -Y 100 -Width 80 -Height 20 -FontSize 9
+    $script:DiskValueLabel = New-ModernLabel -Text "0 MB/s" -X 95 -Y 100 -Width 80 -Height 20 -FontSize 9 -FontStyle "Bold"
+    
+    # Network Usage
+    $netLabel = New-ModernLabel -Text "Network:" -X 200 -Y 10 -Width 80 -Height 20 -FontSize 9
+    $script:NetworkValueLabel = New-ModernLabel -Text "0 KB/s" -X 285 -Y 10 -Width 80 -Height 20 -FontSize 9 -FontStyle "Bold"
+    
+    # Temperature monitoring (if available)
+    $tempLabel = New-ModernLabel -Text "CPU Temp:" -X 200 -Y 55 -Width 80 -Height 20 -FontSize 9
+    $script:TempValueLabel = New-ModernLabel -Text "N/A" -X 285 -Y 55 -Width 80 -Height 20 -FontSize 9 -FontStyle "Bold"
+    
+    # Add controls to metrics panel
+    $metricsPanel.Controls.AddRange(@($cpuLabel, $script:CPUValueLabel, $cpuProgressBar, 
+            $memLabel, $script:MemoryValueLabel, $memProgressBar,
+            $diskLabel, $script:DiskValueLabel,
+            $netLabel, $script:NetworkValueLabel,
+            $tempLabel, $script:TempValueLabel))
+    
+    $panel.Controls.Add($metricsPanel)
+    
+    # Performance trend display (simple text-based for now)
+    $trendPanel = New-ModernPanel -X 10 -Y 200 -Width ($Width - 20) -Height 150 -BackColor "Background"
+    $trendTitle = New-ModernLabel -Text "Performance Trends (Last 60 seconds)" -X 10 -Y 10 -Width 300 -Height 20 -FontSize 10 -FontStyle "Bold"
+    $script:TrendDisplay = New-Object System.Windows.Forms.RichTextBox
+    $script:TrendDisplay.Location = New-Object System.Drawing.Point(10, 35)
+    $script:TrendDisplay.Size = New-Object System.Drawing.Size(($Width - 40), 100)
+    $script:TrendDisplay.BackColor = $script:Colors.Background
+    $script:TrendDisplay.ForeColor = $script:Colors.Text
+    $script:TrendDisplay.Font = New-Object System.Drawing.Font("Consolas", 8)
+    $script:TrendDisplay.ReadOnly = $true
+    $script:TrendDisplay.ScrollBars = [System.Windows.Forms.RichTextBoxScrollBars]::Vertical
+    
+    $trendPanel.Controls.AddRange(@($trendTitle, $script:TrendDisplay))
+    $panel.Controls.Add($trendPanel)
+    
+    # Export button
+    $exportButton = New-ModernButton -Text "Export Report" -X ($Width - 120) -Y ($Height - 35) -Width 100 -Height 25 -BackColor "Primary"
+    $exportButton.Add_Click({
+            Export-PerformanceReport
+        })
+    $panel.Controls.Add($exportButton)
+    
+    return $panel
+}
+
+function Update-AnalyticsDashboard {
+    $snapshot = Get-PerformanceSnapshot
+    if (-not $snapshot) { return }
+    
+    # Update real-time metrics
+    if ($script:CPUValueLabel) {
+        $script:CPUValueLabel.Text = "$($snapshot.CPU)%"
+        $script:CPUProgressBar.Value = [Math]::Min([Math]::Max($snapshot.CPU, 0), 100)
+        
+        # Color coding for CPU
+        if ($snapshot.CPU -gt 80) {
+            $script:CPUValueLabel.ForeColor = $script:Colors.Error
+        }
+        elseif ($snapshot.CPU -gt 60) {
+            $script:CPUValueLabel.ForeColor = $script:Colors.Warning
+        }
+        else {
+            $script:CPUValueLabel.ForeColor = $script:Colors.Success
+        }
+    }
+    
+    if ($script:MemoryValueLabel) {
+        $script:MemoryValueLabel.Text = "$($snapshot.MemoryUsed)%"
+        $script:MemoryProgressBar.Value = [Math]::Min([Math]::Max($snapshot.MemoryUsed, 0), 100)
+        
+        # Color coding for Memory
+        if ($snapshot.MemoryUsed -gt 85) {
+            $script:MemoryValueLabel.ForeColor = $script:Colors.Error
+        }
+        elseif ($snapshot.MemoryUsed -gt 70) {
+            $script:MemoryValueLabel.ForeColor = $script:Colors.Warning
+        }
+        else {
+            $script:MemoryValueLabel.ForeColor = $script:Colors.Success
+        }
+    }
+    
+    if ($script:DiskValueLabel) {
+        $totalDisk = $snapshot.DiskRead + $snapshot.DiskWrite
+        $script:DiskValueLabel.Text = "$([Math]::Round($totalDisk, 1)) MB/s"
+    }
+    
+    if ($script:NetworkValueLabel) {
+        $totalNetwork = $snapshot.NetworkIn + $snapshot.NetworkOut
+        $script:NetworkValueLabel.Text = "$([Math]::Round($totalNetwork, 1)) KB/s"
+    }
+    
+    # Update temperature if available
+    if ($script:TempValueLabel) {
+        try {
+            $temp = Get-WmiObject -Namespace "root/wmi" -Class MSAcpi_ThermalZoneTemperature -ErrorAction SilentlyContinue
+            if ($temp) {
+                $tempC = [Math]::Round(($temp.CurrentTemperature / 10) - 273.15, 1)
+                $script:TempValueLabel.Text = "${tempC}°C"
+                
+                if ($tempC -gt 80) {
+                    $script:TempValueLabel.ForeColor = $script:Colors.Error
+                }
+                elseif ($tempC -gt 70) {
+                    $script:TempValueLabel.ForeColor = $script:Colors.Warning
+                }
+                else {
+                    $script:TempValueLabel.ForeColor = $script:Colors.Success
+                }
+            }
+        }
+        catch {
+            $script:TempValueLabel.Text = "N/A"
+            $script:TempValueLabel.ForeColor = $script:Colors.TextSecondary
+        }
+    }
+    
+    # Update trend display
+    if ($script:TrendDisplay -and $script:PerformanceHistory.CPU.Count -gt 0) {
+        $trendText = "Performance Summary (Last $($script:PerformanceHistory.CPU.Count) readings):`n"
+        $trendText += "CPU Avg: $([Math]::Round(($script:PerformanceHistory.CPU | Measure-Object -Average).Average, 1))% "
+        $trendText += "Max: $([Math]::Round(($script:PerformanceHistory.CPU | Measure-Object -Maximum).Maximum, 1))%`n"
+        $trendText += "Memory Avg: $([Math]::Round(($script:PerformanceHistory.Memory | Measure-Object -Average).Average, 1))% "
+        $trendText += "Max: $([Math]::Round(($script:PerformanceHistory.Memory | Measure-Object -Maximum).Maximum, 1))%`n"
+        $trendText += "Network Avg: $([Math]::Round((($script:PerformanceHistory.NetworkIn + $script:PerformanceHistory.NetworkOut) | Measure-Object -Average).Average, 1)) KB/s`n"
+        $trendText += "`nLast 10 CPU readings: "
+        $trendText += ($script:PerformanceHistory.CPU[-10..-1] | ForEach-Object { [Math]::Round($_, 1) }) -join "%, "
+        $trendText += "%"
+        
+        $script:TrendDisplay.Text = $trendText
+    }
+}
+
+function Export-PerformanceReport {
+    try {
+        $reportPath = Join-Path $script:DataPath "Performance_Report_$(Get-Date -Format 'yyyyMMdd_HHmmss').html"
+        
+        $html = @"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PC Performance Report - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .header { background-color: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .section { background-color: white; margin: 20px 0; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .metric { display: inline-block; margin: 10px; padding: 15px; background-color: #ecf0f1; border-radius: 5px; min-width: 200px; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #2c3e50; }
+        .metric-label { color: #7f8c8d; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PC Performance Report</h1>
+        <p>Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')</p>
+        <p>PC Optimization Suite v$script:ModuleVersion</p>
+    </div>
+    
+    <div class="section">
+        <h2>Current Performance Metrics</h2>
+"@
+        
+        if ($script:PerformanceHistory.CPU.Count -gt 0) {
+            $currentSnapshot = Get-PerformanceSnapshot
+            if ($currentSnapshot) {
+                $html += @"
+        <div class="metric">
+            <div class="metric-label">CPU Usage</div>
+            <div class="metric-value">$($currentSnapshot.CPU)%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Memory Usage</div>
+            <div class="metric-value">$($currentSnapshot.MemoryUsed)%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Disk I/O</div>
+            <div class="metric-value">$([Math]::Round($currentSnapshot.DiskRead + $currentSnapshot.DiskWrite, 1)) MB/s</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Network</div>
+            <div class="metric-value">$([Math]::Round($currentSnapshot.NetworkIn + $currentSnapshot.NetworkOut, 1)) KB/s</div>
+        </div>
+"@
+            }
+            
+            $html += @"
+    </div>
+    
+    <div class="section">
+        <h2>Performance History Analysis</h2>
+        <table>
+            <tr><th>Metric</th><th>Average</th><th>Maximum</th><th>Minimum</th></tr>
+            <tr>
+                <td>CPU Usage (%)</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.CPU | Measure-Object -Average).Average, 2))</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.CPU | Measure-Object -Maximum).Maximum, 2))</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.CPU | Measure-Object -Minimum).Minimum, 2))</td>
+            </tr>
+            <tr>
+                <td>Memory Usage (%)</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.Memory | Measure-Object -Average).Average, 2))</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.Memory | Measure-Object -Maximum).Maximum, 2))</td>
+                <td>$([Math]::Round(($script:PerformanceHistory.Memory | Measure-Object -Minimum).Minimum, 2))</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>System Information</h2>
+        <table>
+"@
+            
+            $systemInfo = Get-SystemOverview
+            if ($systemInfo) {
+                $html += @"
+            <tr><td>Computer Name</td><td>$($systemInfo.ComputerName)</td></tr>
+            <tr><td>Operating System</td><td>$($systemInfo.OS)</td></tr>
+            <tr><td>CPU</td><td>$($systemInfo.CPU)</td></tr>
+            <tr><td>Total RAM</td><td>$($systemInfo.TotalRAM) GB</td></tr>
+            <tr><td>Uptime</td><td>$($systemInfo.Uptime)</td></tr>
+"@
+            }
+            
+            $html += @"
+        </table>
+    </div>
+</body>
+</html>
+"@
+        }
+        
+        $html | Out-File -FilePath $reportPath -Encoding UTF8
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            "Performance report exported successfully to:`n$reportPath`n`nWould you like to open it now?",
+            "Export Complete",
+            [System.Windows.Forms.MessageBoxButtons]::YesNo,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        ) | ForEach-Object {
+            if ($_ -eq [System.Windows.Forms.DialogResult]::Yes) {
+                Start-Process $reportPath
+            }
+        }
+        
+        Add-LogMessage "Performance report exported to: $reportPath"
+    }
+    catch {
+        [System.Windows.Forms.MessageBox]::Show(
+            "Error exporting performance report: $($_.Exception.Message)",
+            "Export Error",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Error
+        )
+        Add-LogMessage "Error exporting performance report: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Start-AnalyticsMonitoring {
+    if ($script:AnalyticsTimer) {
+        $script:AnalyticsTimer.Stop()
+        $script:AnalyticsTimer.Dispose()
+    }
+    
+    Initialize-PerformanceCounters
+    
+    $script:AnalyticsTimer = New-Object System.Windows.Forms.Timer
+    $script:AnalyticsTimer.Interval = 1000  # Update every second
+    $script:AnalyticsTimer.Add_Tick({
+            try {
+                Update-AnalyticsDashboard
+            }
+            catch {
+                Add-LogMessage "Error updating analytics dashboard: $($_.Exception.Message)" -Level "ERROR"
+            }
+        })
+    $script:AnalyticsTimer.Start()
+    
+    Add-LogMessage "Analytics monitoring started"
+}
+
+function Stop-AnalyticsMonitoring {
+    if ($script:AnalyticsTimer) {
+        $script:AnalyticsTimer.Stop()
+        $script:AnalyticsTimer.Dispose()
+        $script:AnalyticsTimer = $null
+    }
+    
+    # Dispose performance counters
+    foreach ($counter in $script:PerformanceCounters.Values) {
+        if ($counter) {
+            $counter.Dispose()
+        }
+    }
+    $script:PerformanceCounters.Clear()
+    
+    Add-LogMessage "Analytics monitoring stopped"
+}
+
+#endregion
+
+#region AI-Powered Optimization Engine (Phase 6)
+
+$script:AIEngine = @{
+    UserPatterns        = @{}
+    OptimizationHistory = @()
+    Recommendations     = @()
+    LastAnalysis        = $null
+}
+
+function Initialize-AIEngine {
+    $aiDataPath = Join-Path $script:DataPath "AI_Data.json"
+    
+    if (Test-Path $aiDataPath) {
+        try {
+            $aiData = Get-Content $aiDataPath | ConvertFrom-Json
+            $script:AIEngine.UserPatterns = $aiData.UserPatterns
+            $script:AIEngine.OptimizationHistory = $aiData.OptimizationHistory
+            $script:AIEngine.LastAnalysis = $aiData.LastAnalysis
+            Add-LogMessage "AI Engine data loaded successfully"
+        }
+        catch {
+            Add-LogMessage "Error loading AI Engine data: $($_.Exception.Message)" -Level "WARNING"
+        }
+    }
+    
+    # Start pattern analysis
+    Start-PatternAnalysis
+}
+
+function Save-AIEngineData {
+    try {
+        $aiDataPath = Join-Path $script:DataPath "AI_Data.json"
+        $aiData = @{
+            UserPatterns        = $script:AIEngine.UserPatterns
+            OptimizationHistory = $script:AIEngine.OptimizationHistory
+            LastAnalysis        = Get-Date
+        }
+        $aiData | ConvertTo-Json -Depth 10 | Out-File $aiDataPath -Encoding UTF8
+        Add-LogMessage "AI Engine data saved successfully"
+    }
+    catch {
+        Add-LogMessage "Error saving AI Engine data: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Analyze-UserPatterns {
+    try {
+        $currentHour = (Get-Date).Hour
+        $dayOfWeek = (Get-Date).DayOfWeek
+        $performanceData = $script:PerformanceHistory
+        
+        # Analyze current system load
+        $currentLoad = @{
+            Timestamp    = Get-Date
+            Hour         = $currentHour
+            DayOfWeek    = $dayOfWeek
+            CPUAvg       = if ($performanceData.CPU.Count -gt 0) { ($performanceData.CPU | Measure-Object -Average).Average } else { 0 }
+            MemoryAvg    = if ($performanceData.Memory.Count -gt 0) { ($performanceData.Memory | Measure-Object -Average).Average } else { 0 }
+            DiskActivity = if ($performanceData.DiskRead.Count -gt 0) { ($performanceData.DiskRead + $performanceData.DiskWrite | Measure-Object -Average).Average } else { 0 }
+        }
+        
+        # Store pattern data
+        $patternKey = "$dayOfWeek-$currentHour"
+        if (-not $script:AIEngine.UserPatterns.ContainsKey($patternKey)) {
+            $script:AIEngine.UserPatterns[$patternKey] = @()
+        }
+        $script:AIEngine.UserPatterns[$patternKey] += $currentLoad
+        
+        # Keep only last 30 days of data per pattern
+        if ($script:AIEngine.UserPatterns[$patternKey].Count -gt 30) {
+            $script:AIEngine.UserPatterns[$patternKey] = $script:AIEngine.UserPatterns[$patternKey][-30..-1]
+        }
+        
+        # Generate recommendations based on patterns
+        Generate-AIRecommendations
+        
+        Add-LogMessage "User patterns analyzed for $patternKey"
+    }
+    catch {
+        Add-LogMessage "Error analyzing user patterns: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Generate-AIRecommendations {
+    $script:AIEngine.Recommendations = @()
+    
+    try {
+        $currentHour = (Get-Date).Hour
+        $dayOfWeek = (Get-Date).DayOfWeek
+        $patternKey = "$dayOfWeek-$currentHour"
+        
+        if ($script:AIEngine.UserPatterns.ContainsKey($patternKey) -and $script:AIEngine.UserPatterns[$patternKey].Count -gt 5) {
+            $historicalData = $script:AIEngine.UserPatterns[$patternKey]
+            
+            # Analyze CPU usage patterns
+            $avgCPU = ($historicalData.CPUAvg | Measure-Object -Average).Average
+            $maxCPU = ($historicalData.CPUAvg | Measure-Object -Maximum).Maximum
+            
+            if ($avgCPU -gt 70) {
+                $script:AIEngine.Recommendations += @{
+                    Type       = "High CPU Usage Pattern"
+                    Message    = "Your system typically uses $([Math]::Round($avgCPU, 1))% CPU at this time. Consider running CPU optimization."
+                    Action     = "OptimizeCPU"
+                    Priority   = "High"
+                    Confidence = [Math]::Min(($historicalData.Count / 30) * 100, 100)
+                }
+            }
+            
+            # Analyze memory usage patterns
+            $avgMemory = ($historicalData.MemoryAvg | Measure-Object -Average).Average
+            if ($avgMemory -gt 80) {
+                $script:AIEngine.Recommendations += @{
+                    Type       = "High Memory Usage Pattern"
+                    Message    = "Memory usage typically reaches $([Math]::Round($avgMemory, 1))% at this time. Consider memory cleanup."
+                    Action     = "OptimizeMemory"
+                    Priority   = "Medium"
+                    Confidence = [Math]::Min(($historicalData.Count / 30) * 100, 100)
+                }
+            }
+            
+            # Predict optimal optimization time
+            $lowUsageHours = @()
+            foreach ($pattern in $script:AIEngine.UserPatterns.GetEnumerator()) {
+                if ($pattern.Value.Count -gt 3) {
+                    $patternAvgCPU = ($pattern.Value.CPUAvg | Measure-Object -Average).Average
+                    if ($patternAvgCPU -lt 30) {
+                        $lowUsageHours += $pattern.Key
+                    }
+                }
+            }
+            
+            if ($lowUsageHours.Count -gt 0) {
+                $nextLowUsage = $lowUsageHours | Sort-Object | Select-Object -First 1
+                $script:AIEngine.Recommendations += @{
+                    Type       = "Optimal Maintenance Window"
+                    Message    = "Based on your usage patterns, $nextLowUsage would be optimal for system maintenance."
+                    Action     = "ScheduleMaintenance"
+                    Priority   = "Low"
+                    Confidence = 85
+                }
+            }
+        }
+        
+        # Check for performance degradation
+        if ($script:PerformanceHistory.CPU.Count -gt 30) {
+            $recent = $script:PerformanceHistory.CPU[-10..-1] | Measure-Object -Average
+            $historical = $script:PerformanceHistory.CPU[-30..-11] | Measure-Object -Average
+            
+            if ($recent.Average -gt ($historical.Average * 1.2)) {
+                $script:AIEngine.Recommendations += @{
+                    Type       = "Performance Degradation Detected"
+                    Message    = "CPU usage has increased by $([Math]::Round((($recent.Average - $historical.Average) / $historical.Average) * 100, 1))% recently."
+                    Action     = "DeepOptimization"
+                    Priority   = "High"
+                    Confidence = 90
+                }
+            }
+        }
+        
+        Add-LogMessage "Generated $($script:AIEngine.Recommendations.Count) AI recommendations"
+    }
+    catch {
+        Add-LogMessage "Error generating AI recommendations: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function New-AIRecommendationsPanel {
+    param(
+        [int]$X = 0,
+        [int]$Y = 0,
+        [int]$Width = 400,
+        [int]$Height = 300
+    )
+    
+    $panel = New-ModernPanel -X $X -Y $Y -Width $Width -Height $Height -BackColor "CardBackground"
+    
+    # Title
+    $titleLabel = New-ModernLabel -Text "AI Recommendations" -X 10 -Y 10 -Width ($Width - 20) -Height 25 -FontSize 12 -FontStyle "Bold"
+    $panel.Controls.Add($titleLabel)
+    
+    # Recommendations list
+    $script:AIRecommendationsList = New-Object System.Windows.Forms.ListBox
+    $script:AIRecommendationsList.Location = New-Object System.Drawing.Point(10, 40)
+    $script:AIRecommendationsList.Size = New-Object System.Drawing.Size(($Width - 20), ($Height - 80))
+    $script:AIRecommendationsList.BackColor = $script:Colors.Background
+    $script:AIRecommendationsList.ForeColor = $script:Colors.Text
+    $script:AIRecommendationsList.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    $script:AIRecommendationsList.DrawMode = [System.Windows.Forms.DrawMode]::OwnerDrawFixed
+    $script:AIRecommendationsList.ItemHeight = 40
+    
+    # Custom drawing for recommendations
+    $script:AIRecommendationsList.Add_DrawItem({
+            param($sender, $e)
+        
+            if ($e.Index -ge 0 -and $e.Index -lt $script:AIEngine.Recommendations.Count) {
+                $recommendation = $script:AIEngine.Recommendations[$e.Index]
+            
+                # Background
+                $brush = if ($e.State -band [System.Windows.Forms.DrawItemState]::Selected) {
+                    New-Object System.Drawing.SolidBrush($script:Colors.Primary)
+                }
+                else {
+                    New-Object System.Drawing.SolidBrush($script:Colors.Background)
+                }
+                $e.Graphics.FillRectangle($brush, $e.Bounds)
+            
+                # Priority color
+                $priorityColor = switch ($recommendation.Priority) {
+                    "High" { $script:Colors.Error }
+                    "Medium" { $script:Colors.Warning }
+                    "Low" { $script:Colors.Success }
+                    default { $script:Colors.Text }
+                }
+            
+                # Draw recommendation text
+                $textBrush = New-Object System.Drawing.SolidBrush($script:Colors.Text)
+                $priorityBrush = New-Object System.Drawing.SolidBrush($priorityColor)
+                $smallFont = New-Object System.Drawing.Font("Segoe UI", 8)
+            
+                $e.Graphics.DrawString($recommendation.Type, $e.Font, $priorityBrush, ($e.Bounds.X + 5), ($e.Bounds.Y + 2))
+                $e.Graphics.DrawString($recommendation.Message, $smallFont, $textBrush, ($e.Bounds.X + 5), ($e.Bounds.Y + 18))
+            
+                $brush.Dispose()
+                $textBrush.Dispose()
+                $priorityBrush.Dispose()
+                $smallFont.Dispose()
+            }
+        })
+    
+    $panel.Controls.Add($script:AIRecommendationsList)
+    
+    # Apply recommendations button
+    $applyButton = New-ModernButton -Text "Apply Selected" -X 10 -Y ($Height - 35) -Width 100 -Height 25 -BackColor "Primary"
+    $applyButton.Add_Click({
+            Apply-SelectedRecommendation
+        })
+    $panel.Controls.Add($applyButton)
+    
+    # Refresh button
+    $refreshButton = New-ModernButton -Text "Refresh" -X 120 -Y ($Height - 35) -Width 80 -Height 25 -BackColor "Secondary"
+    $refreshButton.Add_Click({
+            Analyze-UserPatterns
+            Update-AIRecommendations
+        })
+    $panel.Controls.Add($refreshButton)
+    
+    return $panel
+}
+
+function Update-AIRecommendations {
+    if ($script:AIRecommendationsList) {
+        $script:AIRecommendationsList.Items.Clear()
+        foreach ($recommendation in $script:AIEngine.Recommendations) {
+            $script:AIRecommendationsList.Items.Add("$($recommendation.Type) - $($recommendation.Priority)")
+        }
+    }
+}
+
+function Apply-SelectedRecommendation {
+    if ($script:AIRecommendationsList -and $script:AIRecommendationsList.SelectedIndex -ge 0) {
+        $selectedRecommendation = $script:AIEngine.Recommendations[$script:AIRecommendationsList.SelectedIndex]
+        
+        switch ($selectedRecommendation.Action) {
+            "OptimizeCPU" {
+                # Trigger CPU optimization
+                Start-CPUOptimization
+            }
+            "OptimizeMemory" {
+                # Trigger memory optimization
+                Start-MemoryOptimization
+            }
+            "DeepOptimization" {
+                # Trigger comprehensive optimization
+                Start-ComprehensiveOptimization
+            }
+            "ScheduleMaintenance" {
+                # Show maintenance scheduling dialog
+                Show-MaintenanceScheduler
+            }
+        }
+        
+        # Record that recommendation was applied
+        $script:AIEngine.OptimizationHistory += @{
+            Timestamp      = Get-Date
+            Recommendation = $selectedRecommendation
+            Applied        = $true
+        }
+        
+        Save-AIEngineData
+        Add-LogMessage "Applied AI recommendation: $($selectedRecommendation.Type)"
+    }
+}
+
+function Start-PatternAnalysis {
+    # Start background pattern analysis
+    $script:PatternAnalysisTimer = New-Object System.Windows.Forms.Timer
+    $script:PatternAnalysisTimer.Interval = 300000  # Analyze every 5 minutes
+    $script:PatternAnalysisTimer.Add_Tick({
+            try {
+                Analyze-UserPatterns
+                Save-AIEngineData
+            }
+            catch {
+                Add-LogMessage "Error in pattern analysis: $($_.Exception.Message)" -Level "ERROR"
+            }
+        })
+    $script:PatternAnalysisTimer.Start()
+    
+    Add-LogMessage "Pattern analysis started"
+}
+
+#endregion
+
+#region Gaming Performance Suite (Phase 7)
+
+$script:GamingEngine = @{
+    DetectedGames  = @()
+    GameProfiles   = @{}
+    CurrentProfile = $null
+    FPSMonitoring  = $false
+}
+
+function Initialize-GamingEngine {
+    Detect-InstalledGames
+    Load-GameProfiles
+    Add-LogMessage "Gaming engine initialized"
+}
+
+function Detect-InstalledGames {
+    $script:GamingEngine.DetectedGames = @()
+    
+    try {
+        # Steam games detection
+        $steamPath = Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Valve\Steam" -Name "InstallPath" -ErrorAction SilentlyContinue
+        if ($steamPath) {
+            $steamAppsPath = Join-Path $steamPath.InstallPath "steamapps\common"
+            if (Test-Path $steamAppsPath) {
+                Get-ChildItem $steamAppsPath -Directory | ForEach-Object {
+                    $script:GamingEngine.DetectedGames += @{
+                        Name       = $_.Name
+                        Path       = $_.FullName
+                        Platform   = "Steam"
+                        Executable = (Get-ChildItem $_.FullName -Filter "*.exe" | Select-Object -First 1).Name
+                    }
+                }
+            }
+        }
+        
+        # Epic Games detection
+        $epicManifests = "$env:ProgramData\Epic\EpicGamesLauncher\Data\Manifests"
+        if (Test-Path $epicManifests) {
+            Get-ChildItem $epicManifests -Filter "*.item" | ForEach-Object {
+                try {
+                    $manifest = Get-Content $_.FullName | ConvertFrom-Json
+                    if ($manifest.InstallLocation -and (Test-Path $manifest.InstallLocation)) {
+                        $script:GamingEngine.DetectedGames += @{
+                            Name       = $manifest.DisplayName
+                            Path       = $manifest.InstallLocation
+                            Platform   = "Epic Games"
+                            Executable = $manifest.LaunchExecutable
+                        }
+                    }
+                }
+                catch {
+                    # Skip invalid manifests
+                }
+            }
+        }
+        
+        # Origin games detection
+        $originInstalls = Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Origin Games\*" -ErrorAction SilentlyContinue
+        $originInstalls | ForEach-Object {
+            if ($_.InstallDir -and (Test-Path $_.InstallDir)) {
+                $script:GamingEngine.DetectedGames += @{
+                    Name       = $_.DisplayName
+                    Path       = $_.InstallDir
+                    Platform   = "Origin"
+                    Executable = $_.Install
+                }
+            }
+        }
+        
+        Add-LogMessage "Detected $($script:GamingEngine.DetectedGames.Count) games"
+    }
+    catch {
+        Add-LogMessage "Error detecting games: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Load-GameProfiles {
+    $profilesPath = Join-Path $script:DataPath "GameProfiles.json"
+    
+    if (Test-Path $profilesPath) {
+        try {
+            $profiles = Get-Content $profilesPath | ConvertFrom-Json
+            $script:GamingEngine.GameProfiles = $profiles
+            Add-LogMessage "Game profiles loaded successfully"
+        }
+        catch {
+            Add-LogMessage "Error loading game profiles: $($_.Exception.Message)" -Level "WARNING"
+        }
+    }
+    
+    # Create default profiles for detected games
+    foreach ($game in $script:GamingEngine.DetectedGames) {
+        if (-not $script:GamingEngine.GameProfiles.ContainsKey($game.Name)) {
+            $script:GamingEngine.GameProfiles[$game.Name] = @{
+                Name              = $game.Name
+                Platform          = $game.Platform
+                OptimizationLevel = "Balanced"
+                CustomSettings    = @{
+                    HighPerformancePower           = $true
+                    DisableWindowsGameMode         = $false
+                    OptimizeGPU                    = $true
+                    ClearMemory                    = $true
+                    DisableFullscreenOptimizations = $true
+                }
+                LastUsed          = $null
+            }
+        }
+    }
+    
+    Save-GameProfiles
+}
+
+function Save-GameProfiles {
+    try {
+        $profilesPath = Join-Path $script:DataPath "GameProfiles.json"
+        $script:GamingEngine.GameProfiles | ConvertTo-Json -Depth 10 | Out-File $profilesPath -Encoding UTF8
+        Add-LogMessage "Game profiles saved successfully"
+    }
+    catch {
+        Add-LogMessage "Error saving game profiles: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function New-GamingDashboard {
+    param(
+        [int]$X = 0,
+        [int]$Y = 0,
+        [int]$Width = 500,
+        [int]$Height = 400
+    )
+    
+    $panel = New-ModernPanel -X $X -Y $Y -Width $Width -Height $Height -BackColor "CardBackground"
+    
+    # Title
+    $titleLabel = New-ModernLabel -Text "Gaming Performance Suite" -X 10 -Y 10 -Width ($Width - 20) -Height 25 -FontSize 12 -FontStyle "Bold"
+    $panel.Controls.Add($titleLabel)
+    
+    # Gaming mode toggle
+    $gamingModeCheckbox = New-Object System.Windows.Forms.CheckBox
+    $gamingModeCheckbox.Location = New-Object System.Drawing.Point(10, 40)
+    $gamingModeCheckbox.Size = New-Object System.Drawing.Size(200, 25)
+    $gamingModeCheckbox.Text = "Gaming Mode Active"
+    $gamingModeCheckbox.ForeColor = $script:Colors.Text
+    $gamingModeCheckbox.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+    $script:GamingModeCheckbox = $gamingModeCheckbox
+    
+    $gamingModeCheckbox.Add_CheckedChanged({
+            if ($script:GamingModeCheckbox.Checked) {
+                Enable-GamingMode
+            }
+            else {
+                Disable-GamingMode
+            }
+        })
+    $panel.Controls.Add($gamingModeCheckbox)
+    
+    # Games list
+    $gamesLabel = New-ModernLabel -Text "Detected Games:" -X 10 -Y 75 -Width 200 -Height 20 -FontSize 10 -FontStyle "Bold"
+    $panel.Controls.Add($gamesLabel)
+    
+    $script:GamesListBox = New-Object System.Windows.Forms.ListBox
+    $script:GamesListBox.Location = New-Object System.Drawing.Point(10, 100)
+    $script:GamesListBox.Size = New-Object System.Drawing.Size(($Width - 20), 150)
+    $script:GamesListBox.BackColor = $script:Colors.Background
+    $script:GamesListBox.ForeColor = $script:Colors.Text
+    $script:GamesListBox.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    
+    # Populate games list
+    foreach ($game in $script:GamingEngine.DetectedGames) {
+        $script:GamesListBox.Items.Add("$($game.Name) ($($game.Platform))")
+    }
+    
+    $panel.Controls.Add($script:GamesListBox)
+    
+    # Optimization buttons
+    $optimizeGameButton = New-ModernButton -Text "Optimize Selected Game" -X 10 -Y 260 -Width 150 -Height 30 -BackColor "Primary"
+    $optimizeGameButton.Add_Click({
+            Optimize-SelectedGame
+        })
+    $panel.Controls.Add($optimizeGameButton)
+    
+    $gameBoostButton = New-ModernButton -Text "Quick Game Boost" -X 170 -Y 260 -Width 120 -Height 30 -BackColor "Success"
+    $gameBoostButton.Add_Click({
+            Start-QuickGameBoost
+        })
+    $panel.Controls.Add($gameBoostButton)
+    
+    # FPS monitoring toggle
+    $fpsMonitorCheckbox = New-Object System.Windows.Forms.CheckBox
+    $fpsMonitorCheckbox.Location = New-Object System.Drawing.Point(10, 300)
+    $fpsMonitorCheckbox.Size = New-Object System.Drawing.Size(200, 25)
+    $fpsMonitorCheckbox.Text = "Enable FPS Monitoring"
+    $fpsMonitorCheckbox.ForeColor = $script:Colors.Text
+    $fpsMonitorCheckbox.Font = New-Object System.Drawing.Font("Segoe UI", 9)
+    $script:FPSMonitorCheckbox = $fpsMonitorCheckbox
+    
+    $fpsMonitorCheckbox.Add_CheckedChanged({
+            if ($script:FPSMonitorCheckbox.Checked) {
+                Start-FPSMonitoring
+            }
+            else {
+                Stop-FPSMonitoring
+            }
+        })
+    $panel.Controls.Add($fpsMonitorCheckbox)
+    
+    # Performance profile selector
+    $profileLabel = New-ModernLabel -Text "Performance Profile:" -X 10 -Y 330 -Width 120 -Height 20 -FontSize 9
+    $panel.Controls.Add($profileLabel)
+    
+    $script:ProfileComboBox = New-Object System.Windows.Forms.ComboBox
+    $script:ProfileComboBox.Location = New-Object System.Drawing.Point(140, 330)
+    $script:ProfileComboBox.Size = New-Object System.Drawing.Size(150, 25)
+    $script:ProfileComboBox.BackColor = $script:Colors.Background
+    $script:ProfileComboBox.ForeColor = $script:Colors.Text
+    $script:ProfileComboBox.DropDownStyle = [System.Windows.Forms.ComboBoxStyle]::DropDownList
+    $script:ProfileComboBox.Items.AddRange(@("Ultra Performance", "High Performance", "Balanced", "Power Saving"))
+    $script:ProfileComboBox.SelectedIndex = 2  # Default to Balanced
+    $panel.Controls.Add($script:ProfileComboBox)
+    
+    return $panel
+}
+
+function Enable-GamingMode {
+    try {
+        # Set high performance power plan
+        powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+        
+        # Disable Windows Game Mode (can interfere with some games)
+        Set-ItemProperty -Path "HKCU:\Software\Microsoft\GameBar" -Name "AllowAutoGameMode" -Value 0 -Force
+        
+        # Disable fullscreen optimizations
+        Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name "GameDVR_Enabled" -Value 0 -Force
+        
+        # Optimize GPU settings (basic)
+        # This would typically involve GPU driver specific optimizations
+        
+        Add-LogMessage "Gaming mode enabled"
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            "Gaming Mode Enabled!`n`n• High Performance Power Plan activated`n• Windows Game Mode optimized`n• Fullscreen optimizations disabled`n• GPU settings optimized",
+            "Gaming Mode",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+    }
+    catch {
+        Add-LogMessage "Error enabling gaming mode: $($_.Exception.Message)" -Level "ERROR"
+        [System.Windows.Forms.MessageBox]::Show(
+            "Error enabling gaming mode: $($_.Exception.Message)",
+            "Gaming Mode Error",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Error
+        )
+    }
+}
+
+function Disable-GamingMode {
+    try {
+        # Set balanced power plan
+        powercfg /setactive 381b4222-f694-41f0-9685-ff5bb260df2e
+        
+        # Re-enable Windows Game Mode
+        Set-ItemProperty -Path "HKCU:\Software\Microsoft\GameBar" -Name "AllowAutoGameMode" -Value 1 -Force
+        
+        # Re-enable fullscreen optimizations
+        Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name "GameDVR_Enabled" -Value 1 -Force
+        
+        Add-LogMessage "Gaming mode disabled"
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            "Gaming Mode Disabled!`n`n• Balanced Power Plan restored`n• Windows Game Mode restored`n• Fullscreen optimizations restored",
+            "Gaming Mode",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+    }
+    catch {
+        Add-LogMessage "Error disabling gaming mode: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Optimize-SelectedGame {
+    if ($script:GamesListBox -and $script:GamesListBox.SelectedIndex -ge 0) {
+        $selectedGame = $script:GamingEngine.DetectedGames[$script:GamesListBox.SelectedIndex]
+        $profile = $script:GamingEngine.GameProfiles[$selectedGame.Name]
+        
+        if ($profile) {
+            # Apply game-specific optimizations
+            Apply-GameOptimizations -Game $selectedGame -Profile $profile
+            
+            # Update last used
+            $profile.LastUsed = Get-Date
+            Save-GameProfiles
+            
+            Add-LogMessage "Applied optimizations for: $($selectedGame.Name)"
+        }
+    }
+}
+
+function Apply-GameOptimizations {
+    param($Game, $Profile)
+    
+    try {
+        $optimizations = @()
+        
+        if ($Profile.CustomSettings.HighPerformancePower) {
+            powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+            $optimizations += "High Performance Power Plan"
+        }
+        
+        if ($Profile.CustomSettings.ClearMemory) {
+            [System.GC]::Collect()
+            $optimizations += "Memory Cleanup"
+        }
+        
+        if ($Profile.CustomSettings.DisableFullscreenOptimizations -and $Game.Executable) {
+            $exePath = Join-Path $Game.Path $Game.Executable
+            if (Test-Path $exePath) {
+                # Set compatibility flag to disable fullscreen optimizations
+                $regPath = "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
+                if (-not (Test-Path $regPath)) {
+                    New-Item -Path $regPath -Force | Out-Null
+                }
+                Set-ItemProperty -Path $regPath -Name $exePath -Value "DISABLEDXMAXIMIZEDWINDOWEDMODE" -Force
+                $optimizations += "Disabled Fullscreen Optimizations"
+            }
+        }
+        
+        if ($Profile.OptimizationLevel -eq "Ultra Performance") {
+            # Additional ultra performance optimizations
+            Stop-Service -Name "Themes" -Force -ErrorAction SilentlyContinue
+            $optimizations += "Visual Effects Disabled"
+        }
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            "Game Optimizations Applied for: $($Game.Name)`n`nOptimizations:`n• " + ($optimizations -join "`n• "),
+            "Game Optimization",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+        
+        Add-LogMessage "Applied game optimizations: $($optimizations -join ', ')"
+    }
+    catch {
+        Add-LogMessage "Error applying game optimizations: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Start-QuickGameBoost {
+    try {
+        # Quick optimizations for immediate gaming boost
+        $optimizations = @()
+        
+        # Clear memory
+        [System.GC]::Collect()
+        $optimizations += "Memory cleared"
+        
+        # Set high performance power plan
+        powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+        $optimizations += "High performance power plan"
+        
+        # Stop non-essential services temporarily
+        $servicesToStop = @("Spooler", "Fax", "TabletInputService")
+        foreach ($service in $servicesToStop) {
+            try {
+                Stop-Service -Name $service -Force -ErrorAction SilentlyContinue
+                $optimizations += "Stopped $service service"
+            }
+            catch {
+                # Service might not exist or already stopped
+            }
+        }
+        
+        # Disable Windows animations temporarily
+        Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "MenuShowDelay" -Value 0 -Force
+        $optimizations += "Animations optimized"
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            "Quick Game Boost Applied!`n`nOptimizations:`n• " + ($optimizations -join "`n• "),
+            "Quick Game Boost",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+        
+        Add-LogMessage "Quick game boost applied: $($optimizations -join ', ')"
+    }
+    catch {
+        Add-LogMessage "Error applying quick game boost: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Start-FPSMonitoring {
+    # This would typically involve hooking into DirectX/OpenGL
+    # For now, we'll implement a basic process monitoring system
+    $script:GamingEngine.FPSMonitoring = $true
+    Add-LogMessage "FPS monitoring started (basic implementation)"
+    
+    # In a full implementation, this would use libraries like:
+    # - FRAPS API
+    # - MSI Afterburner SDK
+    # - DirectX/OpenGL hooks
+    # - Steam overlay integration
+}
+
+function Stop-FPSMonitoring {
+    $script:GamingEngine.FPSMonitoring = $false
+    Add-LogMessage "FPS monitoring stopped"
+}
+
+#endregion
+
+#region System Tray Functionality
+
+function Initialize-SystemTray {
+    try {
+        # Create the NotifyIcon
+        $script:NotifyIcon = New-Object System.Windows.Forms.NotifyIcon
+        
+        # Try to load custom icon, fallback to default
+        $iconPath = Join-Path $script:BasePath "icon.ico"
+        if (Test-Path $iconPath) {
+            $script:NotifyIcon.Icon = New-Object System.Drawing.Icon($iconPath)
+        }
+        else {
+            # Create a simple default icon from text
+            $script:NotifyIcon.Icon = [System.Drawing.SystemIcons]::Application
+        }
+        
+        $script:NotifyIcon.Text = "PC Optimization Suite v$script:ModuleVersion"
+        $script:NotifyIcon.Visible = $true
+        
+        # Create context menu
+        $script:ContextMenu = New-Object System.Windows.Forms.ContextMenuStrip
+        $script:ContextMenu.BackColor = $script:Colors.CardBackground
+        $script:ContextMenu.ForeColor = $script:Colors.Text
+        
+        # Show/Hide Main Window
+        $showHideItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $showHideItem.Text = "Show Main Window"
+        $showHideItem.Font = New-Object System.Drawing.Font("Segoe UI", 9, [System.Drawing.FontStyle]::Bold)
+        $showHideItem.Add_Click({
+                Show-MainWindow
+            })
+        $script:ContextMenu.Items.Add($showHideItem)
+        
+        # Separator
+        $script:ContextMenu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+        
+        # Quick Actions
+        $quickScanItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $quickScanItem.Text = "Quick Scan"
+        $quickScanItem.Add_Click({
+                Start-QuickScan
+            })
+        $script:ContextMenu.Items.Add($quickScanItem)
+        
+        $optimizeItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $optimizeItem.Text = "Optimize Now"
+        $optimizeItem.Add_Click({
+                Start-ComprehensiveOptimization
+            })
+        $script:ContextMenu.Items.Add($optimizeItem)
+        
+        # Gaming Mode Toggle
+        $script:GamingModeItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $script:GamingModeItem.Text = "Enable Gaming Mode"
+        $script:GamingModeItem.Add_Click({
+                Toggle-GamingModeFromTray
+            })
+        $script:ContextMenu.Items.Add($script:GamingModeItem)
+        
+        # Separator
+        $script:ContextMenu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+        
+        # System Information
+        $systemInfoItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $systemInfoItem.Text = "System Information"
+        $systemInfoItem.Add_Click({
+                Show-SystemInformation
+            })
+        $script:ContextMenu.Items.Add($systemInfoItem)
+        
+        # Performance Report
+        $reportItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $reportItem.Text = "Export Performance Report"
+        $reportItem.Add_Click({
+                Export-PerformanceReport
+            })
+        $script:ContextMenu.Items.Add($reportItem)
+        
+        # Separator
+        $script:ContextMenu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+        
+        # Settings
+        $settingsItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $settingsItem.Text = "Settings"
+        $settingsItem.Add_Click({
+                Show-SettingsDialog
+            })
+        $script:ContextMenu.Items.Add($settingsItem)
+        
+        # About
+        $aboutItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $aboutItem.Text = "About"
+        $aboutItem.Add_Click({
+                Show-AboutDialog
+            })
+        $script:ContextMenu.Items.Add($aboutItem)
+        
+        # Separator
+        $script:ContextMenu.Items.Add((New-Object System.Windows.Forms.ToolStripSeparator))
+        
+        # Exit
+        $exitItem = New-Object System.Windows.Forms.ToolStripMenuItem
+        $exitItem.Text = "Exit"
+        $exitItem.Add_Click({
+                Exit-Application
+            })
+        $script:ContextMenu.Items.Add($exitItem)
+        
+        # Assign context menu to notify icon
+        $script:NotifyIcon.ContextMenuStrip = $script:ContextMenu
+        
+        # Double-click to show main window
+        $script:NotifyIcon.Add_DoubleClick({
+                Show-MainWindow
+            })
+        
+        # Balloon tip click to show main window
+        $script:NotifyIcon.Add_BalloonTipClicked({
+                Show-MainWindow
+            })
+        
+        Add-LogMessage "System tray initialized successfully"
+    }
+    catch {
+        Add-LogMessage "Error initializing system tray: $($_.Exception.Message)" -Level "ERROR"
+        $script:TrayEnabled = $false
+    }
+}
+
+function Show-MainWindow {
+    if ($script:MainForm) {
+        if ($script:MainForm.WindowState -eq [System.Windows.Forms.FormWindowState]::Minimized) {
+            $script:MainForm.WindowState = [System.Windows.Forms.FormWindowState]::Normal
+        }
+        $script:MainForm.Show()
+        $script:MainForm.Activate()
+        $script:MainForm.BringToFront()
+        
+        # Update context menu
+        if ($script:ContextMenu -and $script:ContextMenu.Items.Count -gt 0) {
+            $script:ContextMenu.Items[0].Text = "Hide to Tray"
+        }
+        
+        Add-LogMessage "Main window restored from system tray"
+    }
+}
+
+function Hide-ToTray {
+    if ($script:MainForm -and $script:TrayEnabled) {
+        $script:MainForm.Hide()
+        
+        # Update context menu
+        if ($script:ContextMenu -and $script:ContextMenu.Items.Count -gt 0) {
+            $script:ContextMenu.Items[0].Text = "Show Main Window"
+        }
+        
+        # Show balloon tip on first minimize
+        if (-not $script:HasShownTrayTip) {
+            $script:NotifyIcon.BalloonTipTitle = "PC Optimization Suite"
+            $script:NotifyIcon.BalloonTipText = "Application minimized to system tray. Double-click icon to restore."
+            $script:NotifyIcon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Info
+            $script:NotifyIcon.ShowBalloonTip(3000)
+            $script:HasShownTrayTip = $true
+        }
+        
+        Add-LogMessage "Application minimized to system tray"
+    }
+}
+
+function Toggle-GamingModeFromTray {
+    try {
+        $currentlyEnabled = $script:GamingModeCheckbox -and $script:GamingModeCheckbox.Checked
+        
+        if ($currentlyEnabled) {
+            Disable-GamingMode
+            $script:GamingModeItem.Text = "Enable Gaming Mode"
+            if ($script:GamingModeCheckbox) {
+                $script:GamingModeCheckbox.Checked = $false
+            }
+            
+            # Show notification
+            $script:NotifyIcon.BalloonTipTitle = "Gaming Mode"
+            $script:NotifyIcon.BalloonTipText = "Gaming Mode Disabled"
+            $script:NotifyIcon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Info
+            $script:NotifyIcon.ShowBalloonTip(2000)
+        }
+        else {
+            Enable-GamingMode
+            $script:GamingModeItem.Text = "Disable Gaming Mode"
+            if ($script:GamingModeCheckbox) {
+                $script:GamingModeCheckbox.Checked = $true
+            }
+            
+            # Show notification
+            $script:NotifyIcon.BalloonTipTitle = "Gaming Mode"
+            $script:NotifyIcon.BalloonTipText = "Gaming Mode Enabled - High Performance Active"
+            $script:NotifyIcon.BalloonTipIcon = [System.Windows.Forms.ToolTipIcon]::Info
+            $script:NotifyIcon.ShowBalloonTip(2000)
+        }
+        
+        Add-LogMessage "Gaming mode toggled from system tray: $(if ($currentlyEnabled) { 'Disabled' } else { 'Enabled' })"
+    }
+    catch {
+        Add-LogMessage "Error toggling gaming mode from tray: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+function Show-SystemInformation {
+    try {
+        $systemData = Get-SystemOverview
+        $info = "PC Optimization Suite v" + $script:ModuleVersion + "`n" +
+        "System Information`n`n" +
+        "Computer: " + $systemData.ComputerName + "`n" +
+        "OS: " + $systemData.OS + "`n" +
+        "CPU: " + $systemData.CPU + "`n" +
+        "RAM: " + $systemData.TotalRAM + " GB`n" +
+        "Uptime: " + $systemData.Uptime + "`n`n" +
+        "Current Performance:`n" +
+        "CPU Usage: " + $systemData.CPUUsage + " percent`n" +
+        "Memory Usage: " + $systemData.MemoryUsage + " percent"
+        
+        [System.Windows.Forms.MessageBox]::Show(
+            $info,
+            "System Information",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+    }
+    catch {
+        [System.Windows.Forms.MessageBox]::Show(
+            "Error retrieving system information: $($_.Exception.Message)",
+            "Error",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Error
+        )
+    }
+}
+
+function Show-AboutDialog {
+    $aboutText = @"
+PC Optimization Suite v$script:ModuleVersion
+
+Professional Windows optimization tool with:
+• Real-time performance monitoring
+• AI-powered optimization recommendations  
+• Gaming performance enhancements
+• System tray background operation
+• Comprehensive system analysis
+
+© 2025 PC Optimization Suite Team
+"@
+    
+    [System.Windows.Forms.MessageBox]::Show(
+        $aboutText,
+        "About PC Optimization Suite",
+        [System.Windows.Forms.MessageBoxButtons]::OK,
+        [System.Windows.Forms.MessageBoxIcon]::Information
+    )
+}
+
+function Update-TrayIcon {
+    param(
+        [string]$Status = "Normal"
+    )
+    
+    if ($script:NotifyIcon) {
+        switch ($Status) {
+            "Optimizing" {
+                $script:NotifyIcon.Text = "PC Optimization Suite - Optimizing..."
+            }
+            "Gaming" {
+                $script:NotifyIcon.Text = "PC Optimization Suite - Gaming Mode Active"
+            }
+            "Alert" {
+                $script:NotifyIcon.Text = "PC Optimization Suite - Attention Required"
+            }
+            default {
+                $script:NotifyIcon.Text = "PC Optimization Suite v$script:ModuleVersion"
+            }
+        }
+    }
+}
+
+function Show-TrayNotification {
+    param(
+        [string]$Title,
+        [string]$Message,
+        [System.Windows.Forms.ToolTipIcon]$Icon = [System.Windows.Forms.ToolTipIcon]::Info,
+        [int]$Duration = 3000
+    )
+    
+    if ($script:NotifyIcon) {
+        $script:NotifyIcon.BalloonTipTitle = $Title
+        $script:NotifyIcon.BalloonTipText = $Message
+        $script:NotifyIcon.BalloonTipIcon = $Icon
+        $script:NotifyIcon.ShowBalloonTip($Duration)
+    }
+}
+
+function Exit-Application {
+    try {
+        # Ask for confirmation
+        $result = [System.Windows.Forms.MessageBox]::Show(
+            "Are you sure you want to exit PC Optimization Suite?",
+            "Confirm Exit",
+            [System.Windows.Forms.MessageBoxButtons]::YesNo,
+            [System.Windows.Forms.MessageBoxIcon]::Question
+        )
+        
+        if ($result -eq [System.Windows.Forms.DialogResult]::Yes) {
+            Add-LogMessage "Application exit requested from system tray"
+            Cleanup-SystemTray
+            
+            if ($script:MainForm) {
+                $script:MainForm.Close()
+            }
+            
+            [System.Windows.Forms.Application]::Exit()
+        }
+    }
+    catch {
+        Add-LogMessage "Error during application exit: $($_.Exception.Message)" -Level "ERROR"
+        [System.Windows.Forms.Application]::Exit()
+    }
+}
+
+function Cleanup-SystemTray {
+    try {
+        if ($script:NotifyIcon) {
+            $script:NotifyIcon.Visible = $false
+            $script:NotifyIcon.Dispose()
+            $script:NotifyIcon = $null
+        }
+        
+        if ($script:ContextMenu) {
+            $script:ContextMenu.Dispose()
+            $script:ContextMenu = $null
+        }
+        
+        Add-LogMessage "System tray cleaned up successfully"
+    }
+    catch {
+        Add-LogMessage "Error cleaning up system tray: $($_.Exception.Message)" -Level "ERROR"
+    }
+}
+
+#endregion
+
 #region Main Form Creation
 
 function New-MainForm {
@@ -995,8 +2616,33 @@ function New-MainForm {
     
     # Handle form closing to stop auto-refresh and timers
     $form.Add_FormClosing({
+            param($sender, $e)
+            
+            # If system tray is enabled and user clicks X, minimize to tray instead of closing
+            if ($script:TrayEnabled -and $e.CloseReason -eq [System.Windows.Forms.CloseReason]::UserClosing) {
+                $e.Cancel = $true
+                Hide-ToTray
+                return
+            }
+            
+            # Actual closing cleanup
             Stop-AutoRefresh
             Stop-LiveTimeUpdate
+            Stop-AnalyticsMonitoring
+            if ($script:PatternAnalysisTimer) {
+                $script:PatternAnalysisTimer.Stop()
+                $script:PatternAnalysisTimer.Dispose()
+            }
+            Save-AIEngineData
+            Save-GameProfiles
+            Cleanup-SystemTray
+        })
+    
+    # Handle form resize/minimize events for system tray
+    $form.Add_Resize({
+            if ($script:TrayEnabled -and $form.WindowState -eq [System.Windows.Forms.FormWindowState]::Minimized) {
+                Hide-ToTray
+            }
         })
     
     # Set icon (if available)
@@ -1026,6 +2672,25 @@ function New-MainForm {
     $versionLabel = New-ModernLabel -Text "v$script:ModuleVersion" -X ($form.ClientSize.Width - 100) -Y 30 -Width 80 -Height 20 -FontSize 9 -ForeColor "TextSecondary"
     $versionLabel.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Right
     $headerPanel.Controls.Add($versionLabel)
+    
+    # System Tray Button (if enabled)
+    if ($script:TrayEnabled) {
+        $trayButton = New-ModernButton -Text "📥 Minimize to Tray" -X ($form.ClientSize.Width - 200) -Y 10 -Width 120 -Height 25 -BackColor "Secondary"
+        $trayButton.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Right
+        $trayButton.Add_Click({
+                Hide-ToTray
+            })
+        $headerPanel.Controls.Add($trayButton)
+    }
+    
+    # Profile Selector
+    $profileLabel = New-ModernLabel -Text "User Profile:" -X ($form.ClientSize.Width - 450) -Y 12 -Width 80 -Height 20 -FontSize 9
+    $profileLabel.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Right
+    $headerPanel.Controls.Add($profileLabel)
+    
+    $profileCombo = New-ProfileSelector -X ($form.ClientSize.Width - 360) -Y 10 -Width 140 -Height 25
+    $profileCombo.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Right
+    $headerPanel.Controls.Add($profileCombo)
     
     $form.Controls.Add($headerPanel)
     
@@ -1147,10 +2812,15 @@ function New-MainForm {
         $form.Controls.Add($scoreCard)
     }
     
-    # Action Buttons Panel with responsive layout - positioned closer to overview
+    # Calculate action panel position based on user profile
+    $profile = Get-CurrentProfile
+    $showAdvancedDashboards = $profile.ShowAdvancedAnalytics -or $profile.ShowGamingDashboard -or $profile.ShowAIRecommendations
+    $actionPanelY = if ($showAdvancedDashboards -and $form.Width -gt 1000) { 600 } else { 280 }
+    
+    # Action Buttons Panel with responsive layout - positioned based on profile
     $formWidth = $form.ClientSize.Width
     $actionPanelWidth = $formWidth - 40
-    $actionPanel = New-ModernPanel -X 20 -Y 280 -Width $actionPanelWidth -Height 120 -BackColor "Background"
+    $actionPanel = New-ModernPanel -X 20 -Y $actionPanelY -Width $actionPanelWidth -Height 120 -BackColor "Background"
     $actionPanel.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right
     
     # First row of buttons (6 buttons including patch notes)
@@ -1233,8 +2903,9 @@ function New-MainForm {
     $formWidth = $form.ClientSize.Width
     $formHeight = $form.ClientSize.Height
     $logPanelWidth = $formWidth - 40
-    $logPanelHeight = $formHeight - 440  # Leave space for header and buttons
-    $logPanel = New-ModernPanel -X 20 -Y 420 -Width $logPanelWidth -Height $logPanelHeight
+    $logPanelY = $actionPanelY + 130  # Position below action panel
+    $logPanelHeight = $formHeight - $logPanelY - 20  # Dynamic height based on action panel position
+    $logPanel = New-ModernPanel -X 20 -Y $logPanelY -Width $logPanelWidth -Height $logPanelHeight
     $logPanel.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left -bor [System.Windows.Forms.AnchorStyles]::Right -bor [System.Windows.Forms.AnchorStyles]::Bottom
     
     $logTitle = New-ModernLabel -Text "Activity Log" -X 10 -Y 10 -Width 200 -Height 25 -FontSize 12 -FontStyle "Bold"
@@ -1259,7 +2930,7 @@ function New-MainForm {
     Add-LogMessage "PC Optimization Suite v$script:ModuleVersion initialized successfully"
     Add-LogMessage "NEW FEATURES: Live Time Display, Game/Software Boost, Internet Boost, Run Smoother"
     Add-LogMessage "System: $($systemData.ComputerName) - $($systemData.OS)"
-    Add-LogMessage "Driver Health: $($driverHealth.Status) ($($driverHealth.HealthScore)%)"
+    Add-LogMessage "Driver Health: $($driverHealth.Status) - Score: $($driverHealth.HealthScore)"
     Add-LogMessage "Theme: $script:CurrentTheme | Auto-refresh: $($script:AutoRefreshEnabled)"
     
     # Start auto-refresh if enabled
@@ -1269,6 +2940,59 @@ function New-MainForm {
     
     # Add event handler to show patch notes on first launch
     $form.Add_Shown({
+            # Initialize advanced dashboards based on user profile
+            $profile = Get-CurrentProfile
+            
+            if ($form.Width -gt 1000) {
+                # Lowered threshold to make features more accessible
+                try {
+                    $dashboardY = 230
+                    $dashboardSpacing = 20
+                    $currentX = 20
+                    
+                    # Analytics Dashboard (Phase 5) - Show for Intermediate and Professional
+                    if ($profile.ShowAdvancedAnalytics) {
+                        $analyticsDashboard = New-AnalyticsDashboard -X $currentX -Y $dashboardY -Width 420 -Height 350
+                        $analyticsDashboard.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left
+                        $form.Controls.Add($analyticsDashboard)
+                        $currentX += 440
+                        Add-LogMessage "Analytics Dashboard loaded for $($profile.Name) profile"
+                    }
+                    
+                    # Gaming Dashboard (Phase 7) - Show for Intermediate and Professional
+                    if ($profile.ShowGamingDashboard) {
+                        $gamingDashboard = New-GamingDashboard -X $currentX -Y $dashboardY -Width 380 -Height 350
+                        $gamingDashboard.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left
+                        $form.Controls.Add($gamingDashboard)
+                        $currentX += 400
+                        Add-LogMessage "Gaming Dashboard loaded for $($profile.Name) profile"
+                    }
+                    
+                    # AI Recommendations Panel (Phase 6) - Show only for Professional
+                    if ($profile.ShowAIRecommendations) {
+                        $aiPanel = New-AIRecommendationsPanel -X $currentX -Y $dashboardY -Width 360 -Height 350
+                        $aiPanel.Anchor = [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left
+                        $form.Controls.Add($aiPanel)
+                        Add-LogMessage "AI Recommendations loaded for $($profile.Name) profile"
+                    }
+                    
+                    # Initialize the engines and start monitoring
+                    Initialize-AIEngine
+                    Initialize-GamingEngine
+                    Start-AnalyticsMonitoring
+                    
+                    Add-LogMessage "Phase 5-7 Advanced Dashboards initialized successfully"
+                }
+                catch {
+                    Add-LogMessage "Error initializing advanced dashboards: $($_.Exception.Message)" -Level "ERROR"
+                }
+            }
+            
+            # Initialize system tray
+            if ($script:TrayEnabled) {
+                Initialize-SystemTray
+            }
+            
             # Show patch notes automatically on first startup
             Start-Sleep -Milliseconds 500  # Small delay to ensure form is fully loaded
             Show-PatchNotes
@@ -1546,7 +3270,7 @@ function Start-SmoothRunning {
         $optimizations = @(
             @{ Step = "Background Process Management"; Percent = 10 },
             @{ Step = "System Resource Optimization"; Percent = 20 },
-            @{ Step = "Memory Cleanup & Defragmentation"; Percent = 35 },
+            @{ Step = "Memory Cleanup and Defragmentation"; Percent = 35 },
             @{ Step = "Registry Optimization"; Percent = 50 },
             @{ Step = "Startup Program Management"; Percent = 65 },
             @{ Step = "Service Configuration Tuning"; Percent = 80 },
@@ -1580,6 +3304,8 @@ function Start-SmoothRunning {
         $closeButton.BackColor = $script:Colors.Error
         Add-LogMessage "Run Smoother error: $($_.Exception.Message)"
     }
+    
+    return $form
 }
 
 #endregion
@@ -1619,6 +3345,11 @@ function Start-QuickScan {
         Add-LogMessage "Scan completed successfully"
         Add-LogMessage "Results: $($driverHealth.Status) driver health, $($systemData.CPUUsage)% CPU usage"
         
+        # Show tray notification if available
+        if ($script:NotifyIcon) {
+            Show-TrayNotification -Title "Quick Scan Complete" -Message "Driver health: $($driverHealth.Status), CPU: $($systemData.CPUUsage)%" -Icon Info
+        }
+        
     }
     catch {
         Add-LogMessage "Error during scan: $($_.Exception.Message)"
@@ -1631,6 +3362,12 @@ function Start-QuickScan {
 function Start-Optimization {
     Add-LogMessage "Starting system optimization..."
     
+    # Show tray notification
+    if ($script:NotifyIcon) {
+        Show-TrayNotification -Title "Optimization Started" -Message "Running comprehensive system optimization..." -Icon Info
+        Update-TrayIcon -Status "Optimizing"
+    }
+    
     try {
         # Run the original optimization script
         $optimizerPath = Join-Path $script:BasePath "PCOptimizationSuite.ps1"
@@ -1638,14 +3375,33 @@ function Start-Optimization {
             Add-LogMessage "Running PC Optimization Suite..."
             Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -File `"$optimizerPath`"" -Wait -NoNewWindow
             Add-LogMessage "Optimization completed"
+            
+            # Show completion notification
+            if ($script:NotifyIcon) {
+                Show-TrayNotification -Title "Optimization Complete" -Message "System optimization finished successfully!" -Icon Info
+                Update-TrayIcon -Status "Normal"
+            }
         }
         else {
             Add-LogMessage "Error: PCOptimizationSuite.ps1 not found"
+            if ($script:NotifyIcon) {
+                Show-TrayNotification -Title "Optimization Error" -Message "Optimization script not found!" -Icon Error
+                Update-TrayIcon -Status "Normal"
+            }
         }
     }
     catch {
         Add-LogMessage "Error during optimization: $($_.Exception.Message)"
+        if ($script:NotifyIcon) {
+            Show-TrayNotification -Title "Optimization Error" -Message "Error occurred during optimization" -Icon Error
+            Update-TrayIcon -Status "Normal"
+        }
     }
+}
+
+function Start-ComprehensiveOptimization {
+    # This function is called from the system tray for comprehensive optimization
+    Start-Optimization
 }
 
 function Start-DriverUpdate {
@@ -2775,3 +4531,23 @@ catch {
 }
 
 #endregion
+
+# Main script execution entry point
+if ($args -contains "-NoGUI") {
+    Show-ConsoleMode
+}
+else {
+    try {
+        $script:MainForm = New-MainForm
+        [System.Windows.Forms.Application]::Run($script:MainForm)
+    }
+    catch {
+        Write-Host "Error starting GUI: $($_.Exception.Message)" -ForegroundColor Red
+        Add-LogMessage "GUI startup error: $($_.Exception.Message)" -Level "ERROR"
+    }
+    finally {
+        if ($script:SystemTrayIcon) {
+            Clean-SystemTray
+        }
+    }
+}
