@@ -3,6 +3,13 @@
 ## ⚠️ IMPORTANT: This is the NEWEST and BEST version!
 **If you found an older version somewhere else, ignore it and use this one instead!**
 
+## � NEW: Super Easy .BAT Launchers!
+**No more windows closing unexpectedly!** 
+- 🔥 **Just double-click:** `START_HERE_NEVER_CLOSES.bat`
+- ✅ **Interactive menu** that guides you through everything
+- ✅ **Window stays open** so you can see what's happening
+- ✅ **Built-in help** for troubleshooting
+
 ---
 
 ## 🎯 What This Does
@@ -10,6 +17,10 @@ This tool makes your computer run faster and smoother by:
 - 🔧 Cleaning up junk files
 - ⚡ Optimizing system performance  
 - 🎮 Boosting gaming performance
+- 🌐 Improving internet speed
+- 📊 Showing you detailed system information
+- ⏰ Live time display with customizable format
+- 📋 Professional interface with real-time monitoring
 - 🌐 Improving internet speed
 - 📊 Showing you detailed system information
 - ⏰ Live time display with customizable format
@@ -34,14 +45,27 @@ This tool makes your computer run faster and smoother by:
 
 ## 🚀 HOW TO RUN IT (Even Easier!)
 
-### Method 1: Easy Launch (Recommended)
+### Method 1: Super Easy .BAT Launcher (RECOMMENDED FOR BEGINNERS!)
 1. **Open the extracted folder**
-2. **Find the file called:** `PCOptimizationGUI.ps1`
-3. **Right-click on it**
-4. **Choose "Run with PowerShell"**
-5. **That's it! The program will start!**
+2. **Double-click:** `START_HERE_NEVER_CLOSES.bat`
+3. **A menu will appear - choose option 1**
+4. **The program will start and the window stays open!**
+   - ✅ **Never closes unexpectedly**
+   - ✅ **Built-in help menu**
+   - ✅ **Works even if you're not tech-savvy**
 
-### Method 2: If Method 1 Doesn't Work
+### Method 2: Quick Launch .BAT
+1. **Double-click:** `EASY_LAUNCH.bat`
+2. **The program starts automatically**
+3. **Window stays open so you can see what's happening**
+
+### Method 3: Direct PowerShell (Original Method)
+1. **Find the file called:** `PCOptimizationGUI.ps1`
+2. **Right-click on it**
+3. **Choose "Run with PowerShell"**
+4. **The program will start**
+
+### Method 4: If Nothing Else Works
 1. **Press Windows Key + R**
 2. **Type:** `powershell`
 3. **Press Enter**
@@ -50,7 +74,7 @@ This tool makes your computer run faster and smoother by:
 6. **Type:** `.\PCOptimizationGUI.ps1`
 7. **Press Enter**
 
-### Method 3: Professional Launcher
+### Method 5: Professional Launcher
 1. **Find the file:** `PCOptimizationLauncher_Professional.ps1`
 2. **Right-click and "Run with PowerShell"**
 3. **This gives you advanced options**
@@ -92,6 +116,11 @@ This tool makes your computer run faster and smoother by:
 
 ## ❓ Troubleshooting (If Something Goes Wrong)
 
+### .BAT File Closes Immediately (FIXED!)
+- ✅ **Use the new launchers:** `START_HERE_NEVER_CLOSES.bat` or `EASY_LAUNCH.bat`
+- ✅ **These never close unexpectedly** - problem solved!
+- ✅ **Built-in help menu** if you need assistance
+
 ### "Cannot run scripts" Error
 1. **Right-click PowerShell icon**
 2. **Choose "Run as Administrator"**
@@ -99,14 +128,17 @@ This tool makes your computer run faster and smoother by:
 4. **Press Enter**
 5. **Type "Y" and press Enter**
 6. **Try running the program again**
+7. **OR simply use:** `START_HERE_NEVER_CLOSES.bat` (easier!)
 
 ### "File not found" Error
 - Make sure you extracted the ZIP file first
 - Make sure you're in the right folder
 - Check that the file name is exactly: `PCOptimizationGUI.ps1`
+- **Try using:** `START_HERE_NEVER_CLOSES.bat` instead
 
 ### Program Won't Start
-1. **Try running as Administrator** (right-click, "Run as Administrator")
+1. **Try the .BAT launcher first:** `START_HERE_NEVER_CLOSES.bat`
+2. **If that doesn't work, try running as Administrator** (right-click, "Run as Administrator")
 2. **Make sure Windows is up to date**
 3. **Try the Professional Launcher instead**
 
