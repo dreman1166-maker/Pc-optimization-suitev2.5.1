@@ -1,53 +1,157 @@
-# 🚀 PC Optimization Suite v2.0.1
+# 🚀 PC Optimization Suite v2.5.1 - LATEST VERSION
 
-## Professional System Optimization & Distribution Platform
-
-A comprehensive PowerShell-based system optimization suite with **automatic update capabilities** and **professional distribution system**. Share with others and push updates automatically!
-
-[![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue)](https://docs.microsoft.com/en-us/powershell/)
-[![Windows](https://img.shields.io/badge/Windows-10%2F11-green)](https://www.microsoft.com/windows)
-[![License](https://img.shields.io/badge/License-Advanced%20System%20Tools-orange)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.0.1-brightgreen)](CHANGELOG.md)
-
-## 🌟 What's New in v2.0
-
-### 🔄 **Automatic Update System**
-- **Self-updating software** - Push updates to all users automatically
-- **GitHub integration** - Version control and release management
-- **Distribution builder** - Create installer packages for easy sharing
-- **Update server** - Manage updates from GitHub or custom servers
-
-### 📦 **Professional Distribution**
-- **Installer packages** - Professional setup with wizard interface
-- **Portable packages** - No installation required, run from USB
-- **Update packages** - Distribute updates to existing installations
-- **Multi-platform support** - Windows 10/11 with PowerShell 5.1+
+## ⚠️ IMPORTANT: This is the NEWEST and BEST version!
+**If you found an older version somewhere else, ignore it and use this one instead!**
 
 ---
 
-## 🎯 Core Features
+## 🎯 What This Does
+This tool makes your computer run faster and smoother by:
+- 🔧 Cleaning up junk files
+- ⚡ Optimizing system performance  
+- 🎮 Boosting gaming performance
+- 🌐 Improving internet speed
+- 📊 Showing you detailed system information
+- ⏰ Live time display with customizable format
+- 📋 Professional interface with real-time monitoring
 
-### 🔧 **System Optimization**
-- **8-Category Health Monitoring** - CPU, Memory, Disk, Network, Registry, Startup, Services, System Files
-- **Intelligent Performance Tuning** - Automatic optimization based on system analysis
-- **Gaming Mode** - Specialized optimization for gaming performance
-- **Registry Cleanup** - Safe registry optimization with automatic backups
-- **Cache Management** - Clear system caches and temporary files
+---
 
-### 🚗 **Advanced Driver Management**
-- **Comprehensive Driver Scanning** - Multiple detection sources and hardware fingerprinting
-- **Automatic Updates** - Windows Update, manufacturer sites, and driver databases
-- **Fallback Systems** - AI-powered compatible driver matching when official drivers aren't available
-- **Enterprise Support** - Network repositories and centralized management
+## 📥 HOW TO DOWNLOAD (Super Easy!)
 
-### 📊 **Monitoring & Logging**
-- **Intelligent Recovery System** - Automated problem detection and solutions
-- **Performance Tracking** - Real-time system health monitoring
-- **Comprehensive Logging** - Detailed logs with pattern recognition
-- **Report Generation** - HTML reports with system analysis
+### Step 1: Download the Files
+1. **Click the GREEN "Code" button** at the top of this page
+2. **Click "Download ZIP"** 
+3. **Save it to your Desktop** (or wherever you want)
 
-### 🛡️ **Safety & Backup**
-- **Automatic Backups** - System restore points before major changes
+### Step 2: Extract the Files
+1. **Right-click the downloaded ZIP file**
+2. **Choose "Extract All..."**
+3. **Click "Extract"**
+4. **You now have a folder with all the files!**
+
+---
+
+## 🚀 HOW TO RUN IT (Even Easier!)
+
+### Method 1: Easy Launch (Recommended)
+1. **Open the extracted folder**
+2. **Find the file called:** `PCOptimizationGUI.ps1`
+3. **Right-click on it**
+4. **Choose "Run with PowerShell"**
+5. **That's it! The program will start!**
+
+### Method 2: If Method 1 Doesn't Work
+1. **Press Windows Key + R**
+2. **Type:** `powershell`
+3. **Press Enter**
+4. **Type:** `cd "C:\Users\YourName\Desktop\Pc-optimization-suitev2.5.1-main"` (replace with your actual path)
+5. **Press Enter**
+6. **Type:** `.\PCOptimizationGUI.ps1`
+7. **Press Enter**
+
+### Method 3: Professional Launcher
+1. **Find the file:** `PCOptimizationLauncher_Professional.ps1`
+2. **Right-click and "Run with PowerShell"**
+3. **This gives you advanced options**
+
+---
+
+## ⚡ What's NEW in Version 2.5.1
+
+### � LATEST HOTFIXES (September 21, 2025)
+- ✅ **FIXED:** Time display no longer cuts off at the top
+- ✅ **FIXED:** Time display doesn't overlap with computer name anymore
+- ✅ **ENHANCED:** Transparent time panel for seamless look
+- ✅ **IMPROVED:** Better spacing and positioning
+- ✅ **REFINED:** Cleaner system information layout
+
+### 🌟 Major Features from v2.5.0
+- 🕒 **Live Time Display** - Real-time clock with 12/24 hour format options
+- 🎮 **Specialized Boost Buttons** - Game Boost, Internet Boost, Run Smoother
+- 📊 **Advanced Performance Scoring** - 7-tier system from Critical to Exceptional  
+- � **Auto-Launch Patch Notes** - See what's new when you start the program
+- 🎨 **Professional Dark Theme** - Sleek modern interface
+- ⚙️ **Customizable Settings** - Time format, themes, auto-refresh options
+
+---
+
+## 🛠️ What Each Button Does
+
+| Button | What It Does |
+|--------|-------------|
+| **Game/Software Boost** | Makes games and programs run faster |
+| **Internet Boost** | Speeds up your internet connection |
+| **Run Smoother** | Makes your whole computer more responsive |
+| **Performance Test** | Tests how fast your computer is |
+| **System Cleanup** | Removes junk files to free up space |
+| **Memory Optimization** | Frees up RAM memory |
+| **Driver Updates** | Checks for driver updates |
+
+---
+
+## ❓ Troubleshooting (If Something Goes Wrong)
+
+### "Cannot run scripts" Error
+1. **Right-click PowerShell icon**
+2. **Choose "Run as Administrator"**
+3. **Type:** `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+4. **Press Enter**
+5. **Type "Y" and press Enter**
+6. **Try running the program again**
+
+### "File not found" Error
+- Make sure you extracted the ZIP file first
+- Make sure you're in the right folder
+- Check that the file name is exactly: `PCOptimizationGUI.ps1`
+
+### Program Won't Start
+1. **Try running as Administrator** (right-click, "Run as Administrator")
+2. **Make sure Windows is up to date**
+3. **Try the Professional Launcher instead**
+
+---
+
+## � Is This Safe?
+
+**YES!** This is completely safe:
+- ✅ No viruses or malware
+- ✅ Doesn't steal your personal information
+- ✅ Only optimizes your computer
+- ✅ Creates backup files before making changes
+- ✅ Open source - you can see all the code
+
+---
+
+## 💡 Pro Tips
+
+- **Run it once a week** for best performance
+- **Use "Game Boost"** before playing games
+- **Check the Performance Score** to see improvements
+- **The patch notes show up automatically** - read them to see what's new!
+- **Time format can be changed** in settings (12-hour vs 24-hour)
+
+---
+
+## 📞 Need Help?
+
+If you're still confused or something isn't working:
+1. **Check the troubleshooting section above**
+2. **Make sure you downloaded the RIGHT version** (this one!)
+3. **Try restarting your computer** and running it again
+4. **Run as Administrator** if you're having permission issues
+
+---
+
+## 🎉 Enjoy Your Faster Computer!
+
+After running this tool, your computer should feel much snappier and responsive. The live time display will show you the current time, and you can monitor your system performance in real-time!
+
+**Remember:** This is version **2.5.1** - the latest and greatest! Don't use older versions.
+
+---
+
+*Made with ❤️ for people who want their computers to run better without the technical headaches!*
 - **Recovery Recommendations** - AI-powered problem solving
 - **Rollback Capabilities** - Undo changes if issues occur
 - **Safe Mode Operations** - Run optimizations safely
